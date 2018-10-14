@@ -13,6 +13,8 @@ Rytis Maskeliūnas, rytis.maskeliunas@ktu.lt
 #### Project Executant:
 Marius Ambrazevicius, m.ambrazevicius@ktu.edu
 
+---
+
 # Mariaus Ambrazevičiaus Magistro Projektas
 ## Vartotojo patirties ir grafinės sąsajos analizės sistema
 
