@@ -8,7 +8,7 @@ Analyzing and prep-work phase.
 
 ### Contacts:
 #### Guide:
-Rytis Maskeliūnas, rytis.maskeliunas@ktu.lt
+prof. Rytis Maskeliūnas, rytis.maskeliunas@ktu.lt
 
 #### Project Executant:
 Marius Ambrazevicius, m.ambrazevicius@ktu.edu
