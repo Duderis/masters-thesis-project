@@ -1,0 +1,15 @@
+version: '2'
+services:
+    uicore
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        privileged: true
+        volumes:
+            - ./:/var/www/html
+        networks:
+            - dev_net
+            
+networks:
+    dev_net:
+        external: true
