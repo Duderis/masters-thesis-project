@@ -1,15 +1,18 @@
 version: '2'
 services:
-    uicore
+    uicore:
         build:
             context: ./
             dockerfile: Dockerfile
         privileged: true
         volumes:
             - ./:/var/www/html
-        networks:
-            - dev_net
-            
-networks:
-    dev_net:
-        external: true
+        ports:
+            - "80:80"
+
+    mysql:
+        image: mysql:5.7
+        environment:
+         - MYSQL_ROOT_PASSWORD=root         
+        ports:
+         - "3306:3306"
