@@ -1,0 +1,16 @@
+{% block flash %}
+    {% for message in app.flashes('success') %}
+        <div class="ui success message">
+            <div class="header">
+                {{ message }}
+            </div>
+        </div>
+    {% endfor %}
+    {% for message in app.flashes('error') %}
+        <div class="ui negative message">
+            <div class="header">
+                {{ message }}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

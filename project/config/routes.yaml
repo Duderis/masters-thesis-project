@@ -1,3 +1,6 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+plum_tree_systems_user:
+    resource: "@PlumTreeSystemsUserBundle/Resources/config/routes/securityRoutes.yml"
+    prefix:   /

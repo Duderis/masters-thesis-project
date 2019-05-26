@@ -1,0 +1,14 @@
+{% extends 'menuBase.html.twig' %}
+
+{% block menuItems %}
+    {% set userRoutes = getUserRoutes() %}
+    {% set current_path = app.request.get('_route') %}
+    {% for route in userRoutes %}
+        <a
+                href="{{ path(route.routeName) }}"
+                class="{% if current_path == route.routeName %}active {% endif %}item"
+        >
+            {{ route.label }}
+        </a>
+    {% endfor %}
+{% endblock %}
