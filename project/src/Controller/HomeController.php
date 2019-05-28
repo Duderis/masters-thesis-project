@@ -28,4 +28,14 @@ class HomeController extends AbstractController
     {
         return $this->redirectToRoute('login_redirect');
     }
+
+    /**
+     * @Route("/notImplemented", name="not_implemented")
+     * @param Request $request
+     * @return Response
+     */
+    public function notImplemented(Request $request)
+    {
+        return $this->render("user/notImplemented.html.twig");
+    }
 }

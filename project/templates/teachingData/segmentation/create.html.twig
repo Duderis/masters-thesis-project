@@ -1,0 +1,22 @@
+{% extends 'menuBase.html.twig' %}
+
+{% block content %}
+    <h1>New segmentation data</h1>
+    <div class="ui divider"></div>
+    <form name="new_analysis" class="ui form" method="post" enctype="multipart/form-data">
+        <div class="field">
+            {{ form_label(form.image) }}
+            {{ form_widget(form.image) }}
+        </div>
+        <div class="field">
+            {{ form_label(form.maskedImage) }}
+            {{ form_widget(form.maskedImage) }}
+        </div>
+        <div class="field">
+            {{ form_label(form.enabled) }}
+            {{ form_widget(form.enabled) }}
+        </div>
+        <button class="ui orange button" type="submit">Submit</button>
+        {{ form_row(form._token) }}
+    </form>
+{% endblock %}

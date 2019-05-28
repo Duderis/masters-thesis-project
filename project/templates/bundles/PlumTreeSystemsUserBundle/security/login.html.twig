@@ -17,7 +17,7 @@
                             <input type="password" id="password" name="_password" placeholder="Password"/>
                         </div>
                     </div>
-                    <button class="ui fluid large button" type="submit">Login</button>
+                    <button class="ui fluid orange large button" type="submit">Login</button>
                 </div>
                 <div class="ui error message">
                     {% if error %}
@@ -26,6 +26,9 @@
                 </div>
                 <input type="hidden" name="_target_path" value="/"/>
             </form>
+            <div class="ui message">
+                Don't have an account? <a href="{{ path('registration') }}">Sign up</a>
+            </div>
         </div>
     </div>
 {% endblock %}

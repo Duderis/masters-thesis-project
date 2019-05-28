@@ -1,0 +1,18 @@
+{% extends 'menuBase.html.twig' %}
+
+{% block content %}
+    <h1>New analysis</h1>
+    <div class="ui divider"></div>
+    <form name="new_analysis" class="ui form" method="post" enctype="multipart/form-data">
+        <div class="field">
+            {{ form_label(form.name) }}
+            {{ form_widget(form.name) }}
+        </div>
+        <div class="field">
+            {{ form_label(form.analysisTarget) }}
+            {{ form_widget(form.analysisTarget) }}
+        </div>
+        <button class="ui orange button" type="submit">Submit</button>
+        {{ form_row(form._token) }}
+    </form>
+{% endblock %}

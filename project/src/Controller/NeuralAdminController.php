@@ -4,6 +4,17 @@
 namespace App\Controller;
 
 
+use App\Entity\Analysis;
+use App\Entity\ClassificationLearningData;
+use App\Entity\SegmentationLearningData;
+use App\Form\NewAnalysisType;
+use App\Form\NewClassificationDataType;
+use App\Form\NewSegmentationDataType;
+use App\Repository\AnalysisRepository;
+use App\Repository\ClassificationLearningDataRepository;
+use App\Repository\SegmentationLearningDataRepository;
+use App\Service\ScheduleManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -49,7 +60,131 @@ class NeuralAdminController extends AbstractController
      */
     public function teachingDataAction(Request $request)
     {
-        return $this->render('admin/notImplemented.html.twig');
+        return $this->render('teachingData/index.html.twig');
+    }
+
+    /**
+     * @Route("/admin/teach/teachingData/segmentation", name="teachingData_segmentation")
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @return Response
+     */
+    public function teachingSegmentationDataAction(Request $request, EntityManagerInterface $entityManager)
+    {
+        $limit = 10;
+        $thisPage = $request->get('page') ?? 1;
+        $page = $thisPage - 1;
+
+        /** @var SegmentationLearningDataRepository $dataRepo */
+        $dataRepo = $entityManager->getRepository(SegmentationLearningData::class);
+        $dataCount = $dataRepo->getCount();
+
+        $pagination = [
+            'page' => $page,
+            'thisPage' => $page + 1,
+            'maxPages' => ceil($dataCount/$limit) ?? 1,
+            'route' => 'admin_teach_teachingData'
+        ];
+
+        $data = $dataRepo->findBy(
+            [],
+            [],
+            $limit,
+            $page*$limit
+        );
+        return $this->render(
+            'teachingData/segmentation/index.html.twig',
+            [
+                'data' => $data,
+                'pagination' => $pagination
+            ]
+        );
+    }
+
+    /**
+     * @Route("/admin/teach/teachingData/segmentation/new", name="teachingData_segmentation_create")
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @return Response
+     */
+    public function teachingSegmentationDataCreateAction(Request $request, EntityManagerInterface $entityManager)
+    {
+        $newData = new SegmentationLearningData();
+
+        $form = $this->createForm(NewSegmentationDataType::class, $newData);
+
+        $form->handleRequest($request);
+
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->persist($newData);
+            $entityManager->flush();
+            return $this->redirectToRoute('teachingData_segmentation');
+        }
+
+        return $this->render('teachingData/segmentation/create.html.twig', ['form' => $form->createView()]);
+    }
+
+    /**
+     * @Route("/admin/teach/teachingData/classification", name="teachingData_classification")
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @return Response
+     */
+    public function teachingClassificationDataAction(Request $request, EntityManagerInterface $entityManager)
+    {
+        $limit = 10;
+        $thisPage = $request->get('page') ?? 1;
+        $page = $thisPage - 1;
+
+        /** @var ClassificationLearningDataRepository $dataRepo */
+        $dataRepo = $entityManager->getRepository(ClassificationLearningData::class);
+        $dataCount = $dataRepo->getCount();
+
+        $pagination = [
+            'page' => $page,
+            'thisPage' => $page + 1,
+            'maxPages' => ceil($dataCount/$limit) ?? 1,
+            'route' => 'admin_teach_teachingData'
+        ];
+
+        $data = $dataRepo->findBy(
+            [],
+            [],
+            $limit,
+            $page*$limit
+        );
+        return $this->render(
+            'teachingData/classification/index.html.twig',
+            [
+                'data' => $data,
+                'pagination' => $pagination
+            ]
+        );
+    }
+
+    /**
+     * @Route("/admin/teach/teachingData/classification/create", name="teachingData_classification_create")
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @return Response
+     */
+    public function teachingClassificationDataCreateAction(Request $request, EntityManagerInterface $entityManager)
+    {
+        $newData = new ClassificationLearningData();
+
+        $form = $this->createForm(NewClassificationDataType::class, $newData);
+
+        $form->handleRequest($request);
+
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->persist($newData);
+            $entityManager->flush();
+            return $this->redirectToRoute('teachingData_classification');
+        }
+
+        return $this->render('teachingData/classification/create.html.twig', ['form' => $form->createView()]);
     }
 
     /**

@@ -1,0 +1,15 @@
+{% extends 'menuBase.html.twig' %}
+
+{% block content %}
+    <div style="display: flex; justify-content: space-between; align-items: center">
+        <h1>Segmentation data</h1>
+        <div>
+            <a href="{{ path('teachingData_segmentation_create') }}" class="ui icon button orange">
+                <i class="icon plus"></i>
+                Create
+            </a>
+        </div>
+    </div>
+    <div class="ui divider"></div>
+    {% include 'teachingData/segmentation/table.html.twig' %}
+{% endblock %}

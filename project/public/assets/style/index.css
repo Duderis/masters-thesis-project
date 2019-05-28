@@ -61,7 +61,7 @@ body {
     margin-left: 15em!important;
     box-sizing: border-box;
     padding: 3em;
-    width: auto!important;
+    /*width: auto!important;*/
 }
 
 .full.height {
