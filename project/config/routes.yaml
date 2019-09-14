@@ -1,3 +1,14 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+plum_tree_systems_user:
+    resource: "@PlumTreeSystemsUserBundle/Resources/config/routes/securityRoutes.yml"
+    prefix:   /
+
+pts_file_download:
+    path:     /download/{id}
+    defaults: { _controller: PlumTreeSystems\FileBundle\Controller\FileController::downloadAction }
+
+pts_file_remove:
+    path:     /remove/{id}
+    defaults: { _controller: PlumTreeSystems\FileBundle\Controller\FileController::removeAction }

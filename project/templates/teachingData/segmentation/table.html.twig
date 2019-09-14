@@ -1,0 +1,68 @@
+{% block table %}
+    <table class="ui celled table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Created At</th>
+            <th>Image</th>
+            <th>MaskedImage</th>
+            <th>Enabled</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if data is empty %}
+            <tr>
+                <th colspan="7" class="flex__container--horizontal table__cell--notFound">
+                    No data found.
+                </th>
+            </tr>
+        {% endif %}
+        {% for datum in data %}
+            <tr>
+                <td data-label="Id">{{ datum.id }}</td>
+                <td data-label="Created At">{{ datum.createdAt|date('Y-m-d H:i:s') }}</td>
+                <td data-label="Image"><img style="width: 200px; max-height: 200px" src="{{ datum.image|downloadUrlParser }}" /></td>
+                <td data-label="MaskedImage"><img style="width: 200px; max-height: 200px" src="{{ datum.maskedImage|downloadUrlParser }}" /></td>
+                <td data-label="Enabled">{{ datum.enabled }}</td>
+                <td data-label="Actions">
+                    <a href="{{ path('not_implemented') }}" class="ui button">Edit</a>
+                    <a href="{{ path('not_implemented') }}" class="ui red button">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        {% if pagination.maxPages > 1 %}
+            <tfoot class="full-width">
+            <tr>
+                <th colspan="9">
+                    <div class="table__paginationContainer">
+                        <div class="ui pagination menu">
+                            {% if pagination.thisPage == 1 %}
+                                <a class="item disabled"><i class="angle left icon"></i></a>
+                            {% else %}
+                                <a class="item" href="{{ path(pagination.route, {
+                                    'page': pagination.thisPage - 1
+                                }) }}">
+                                    <i class="angle left icon"></i>
+                                </a>
+                            {% endif %}
+                            <a class="active item">
+                                {{ pagination.thisPage }}
+                            </a>
+                            {% if pagination.thisPage == pagination.maxPages %}
+                                <a class="item disabled"><i class="angle right icon"></i></a>
+                            {% else %}
+                                <a class="item" href="{{ path(pagination.route, {
+                                    'page': pagination.thisPage + 1
+                                }) }}"><i class="angle right icon"></i>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            </tfoot>
+        {% endif %}
+    </table>
+{% endblock %}

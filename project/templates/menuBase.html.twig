@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    {% block nav %}
+        <div class="toc">
+            <div class="ui vertical left fixed inverted menu" style="display: flex;">
+                <a href="{{ path('login_redirect') }}" class="item">VPGSA</a>
+                {% block menuItems %}
+                    {% set userRoutes = getRoutes() %}
+                    {% set current_path = app.request.get('_route') %}
+                    {% for route in userRoutes %}
+                        <a
+                                href="{{ path(route.routeName) }}"
+                                class="{% if current_path == route.routeName %}active {% endif %}item"
+                        >
+                            {{ route.label }}
+                        </a>
+                    {% endfor %}
+                {% endblock %}
+                <div style="height: 100%; display: flex; flex-direction: column; justify-content: flex-end;">
+                    <a href="{{ path('logout') }}" class="item">Logout</a>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+    <div class="ui main container">
+        {% include 'flashMessages.html.twig' %}
+        {% block content %}
+        {% endblock %}
+    </div>
+{% endblock %}

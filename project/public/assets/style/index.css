@@ -1,0 +1,137 @@
+body {
+    height: 100%;
+}
+
+.body__container {
+    padding: 10em
+}
+
+/*REUSABLE COMPONENTS*/
+
+.flex__container--horizontal {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.flex__container--vertical {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fullWidth {
+    width: 100%!important;
+}
+
+.noMarginItem {
+    margin: 0!important;
+}
+
+.paddedCard {
+    padding: 1em!important;
+}
+
+.icon--big {
+    font-size: 2.5em!important;
+}
+
+.icon--big::before {
+    position: relative;
+    top: 0.3em;
+}
+
+.icon__container {
+    margin-bottom: 1.2em
+}
+
+.icon__container:last-child {
+    margin-bottom: 0;
+}
+
+.icon--image {
+    height: 3em;
+    padding: 0.3em;
+}
+
+/*REUSABLE COMPONENTS END*/
+
+.main.container {
+    margin-left: 15em!important;
+    box-sizing: border-box;
+    padding: 3em;
+    /*width: auto!important;*/
+}
+
+.full.height {
+    width: 100%!important;
+}
+
+.card--unsetWidth {
+    width: auto!important;
+}
+
+.filterBar {
+    align-items: center;
+}
+
+.filterBar--end {
+    justify-content: flex-end;
+}
+
+.details__label,.boldText {
+    font-weight: 600;
+}
+
+.details__mainCardContainer {
+    width: 100%!important;
+}
+
+.details__mainCard {
+    flex:3
+}
+
+.details__mainCardSplit {
+    flex:0.2
+}
+
+.details__card--width {
+    width:100%!important;
+}
+
+.details__membershipCardContainer {
+    flex:1; margin: 1em;
+    flex-basis: 40%;
+}
+
+.details__membershipMainCardContainer {
+    flex-wrap: wrap;
+}
+
+.details__membershipCard {
+    flex:1;
+}
+
+.associateBreakdown__container, .associateBreakdown__table {
+    flex: 8;
+}
+
+.memberBreakdown__container, .associateBreakdown__associates {
+    flex: 2;
+}
+
+.table__cell--centered {
+    display: flex; justify-content: center
+}
+
+.table__paginationContainer {
+    width: 100%!important;
+    display: flex;
+    justify-content: center;
+}
+
+.table__cell--notFound {
+    width: 100%;
+    padding: 1em;
+}
