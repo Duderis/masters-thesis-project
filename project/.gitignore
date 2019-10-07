@@ -18,3 +18,4 @@
 ###< symfony/web-server-bundle ###
 
 docker-compose.override.yml
+files

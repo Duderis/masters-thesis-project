@@ -4,11 +4,13 @@
 namespace App\Controller;
 
 use App\Entity\Analysis;
+use App\Form\EditAnalysisType;
 use App\Form\NewAnalysisType;
 use App\Repository\AnalysisRepository;
 use App\Service\ScheduleManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -80,5 +82,52 @@ class NeuralNetworkController extends AbstractController
         }
 
         return $this->render('analysis/create.html.twig', ['form' => $form->createView()]);
+    }
+
+    /**
+     * @param int $id
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @Route("/neural/delete/{id}", name="analysis_delete")
+     * @return RedirectResponse
+     */
+    public function removeAnalysisAction(int $id, Request $request, EntityManagerInterface $entityManager)
+    {
+        $analysisRepository = $entityManager->getRepository(Analysis::class);
+        $analysis = $analysisRepository->find($id);
+        if ($analysis) {
+            $entityManager->remove($analysis);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('neural_index');
+    }
+
+    /**
+     * @param int $id
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @Route("/neural/edit/{id}", name="analysis_edit")
+     * @return RedirectResponse|Response
+     */
+    public function editAnalysisAction(int $id, Request $request, EntityManagerInterface $entityManager)
+    {
+        $analysisRepository = $entityManager->getRepository(Analysis::class);
+        $analysis = $analysisRepository->find($id);
+
+        if ($analysis) {
+            $form = $this->createForm(EditAnalysisType::class, $analysis);
+
+            $form->handleRequest($request);
+            if ($form->isSubmitted() && $form->isValid()) {
+                $entityManager->flush();
+            } else {
+                return $this->render('analysis/edit.html.twig', [
+                    'form' => $form->createView(),
+                    'analysisId' => $analysis->getId()
+                ]);
+            }
+        }
+        return $this->redirectToRoute('neural_index');
     }
 }

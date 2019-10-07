@@ -24,8 +24,8 @@
                 <td data-label="Schedule State">{{ analysis.scheduleState }}</td>
                 <td data-label="Snapshot"><img style="width: 200px; max-height: 200px" src="{{ analysis.analysisTarget|downloadUrlParser }}" /></td>
                 <td data-label="Actions">
-                    <a href="{{ path('not_implemented') }}" class="ui button">Edit</a>
-                    <a href="{{ path('not_implemented') }}" class="ui red button">Delete</a>
+                    <a href="{{ path('analysis_edit', {id:analysis.id}) }}" class="ui button">Edit</a>
+                    <a href="{{ path('analysis_delete', {id:analysis.id}) }}" class="ui red button">Delete</a>
                 </td>
             </tr>
         {% endfor %}

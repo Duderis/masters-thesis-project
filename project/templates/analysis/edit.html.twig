@@ -1,0 +1,18 @@
+{% extends 'menuBase.html.twig' %}
+
+{% block content %}
+    <h1>Editing analysis {{ analysisId }}</h1>
+    <div class="ui divider"></div>
+    {{ form_start(form, {'attr': {'class': 'ui form'}} ) }}
+        <div class="field">
+            {{ form_label(form.name) }}
+            {{ form_widget(form.name) }}
+        </div>
+        <div class="field">
+            {{ form_label(form.scheduleState) }}
+            {{ form_widget(form.scheduleState) }}
+        </div>
+        <button class="ui orange button" type="submit">Submit</button>
+        {{ form_row(form._token) }}
+    {{ form_end(form) }}
+{% endblock %}

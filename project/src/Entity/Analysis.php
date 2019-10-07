@@ -16,6 +16,7 @@ class Analysis
     const SCHEDULE_STATE_PLANNED = 'PLANNED';
     const SCHEDULE_STATE_FAILED = 'FAILED';
     const SCHEDULE_STATE_COMPLETE = 'COMPLETE';
+    const SCHEDULE_STATE_CANCELLED = 'CANCELLED';
 
     /**
      * @ORM\Id

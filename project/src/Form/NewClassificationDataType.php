@@ -14,7 +14,7 @@ class NewClassificationDataType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('image', PTSFileType::class, [
+            ->add('logo', PTSFileType::class, [
                 'multiple' => false
             ])
             ->add('classification', TextType::class, [
