@@ -43,5 +43,5 @@ RUN wget https://get.symfony.com/cli/installer -O - | bash && mv /root/.symfony/
 COPY --from=0 /etc/php_zts /etc/php_zts
 RUN cd /usr/local/bin && ln -s /etc/php_zts/bin/php ./php_zts
 COPY php.ini /usr/local/etc/php/
-COPY ./ /var/www/html
+COPY . /var/www/html
 RUN chmod -R 777 /var/www/html/var

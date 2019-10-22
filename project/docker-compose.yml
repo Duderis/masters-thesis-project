@@ -2,13 +2,18 @@ version: '2'
 services:
     uicore:
         build:
-            context: ./
+            context: ./uicore
             dockerfile: Dockerfile
         privileged: true
         volumes:
-            - ./:/var/www/html
+            - ./uicore:/var/www/html
         ports:
             - "80:80"
+
+#    tensor:
+#        image: tensorflow/tensorflow:latest-gpu-jupyter
+#        ports:
+#            - "8888:8888"
 
     mysql:
         image: mysql:5.7
