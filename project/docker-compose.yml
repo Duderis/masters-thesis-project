@@ -1,4 +1,4 @@
-version: '2'
+version: '2.3'
 services:
     uicore:
         build:
@@ -10,10 +10,17 @@ services:
         ports:
             - "80:80"
 
-#    tensor:
+    tensor:
 #        image: tensorflow/tensorflow:latest-gpu-jupyter
-#        ports:
-#            - "8888:8888"
+        build:
+            context: ./tensor
+        volumes:
+            - ./tensor:/magic
+        working_dir: /magic
+        runtime:
+            nvidia
+        ports:
+            - "8888:8888"
 
     mysql:
         image: mysql:5.7

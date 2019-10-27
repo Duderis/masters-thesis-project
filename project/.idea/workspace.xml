@@ -2,111 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37ece15-c1c7-425a-b00c-2bc621d2ab5f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.test" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/.env.test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensor/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/console" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/bin/console" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/phpunit" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/bin/phpunit" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/cache.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/cache.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/dev/debug.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/dev/debug.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/dev/easy_log_handler.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/dev/easy_log_handler.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/dev/monolog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/dev/monolog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/dev/routing.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/dev/routing.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/dev/swiftmailer.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/dev/web_profiler.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/doctrine_migrations.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/prod/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/prod/monolog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/prod/monolog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/pts_file_bundle.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/pts_file_bundle.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/pts_user_bundle.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/pts_user_bundle.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/routing.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/routing.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/sensio_framework_extra.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/swiftmailer.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/test/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/test/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/test/monolog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/test/monolog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/test/routing.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/test/routing.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/test/swiftmailer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/test/swiftmailer.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/test/validator.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/test/validator.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/test/web_profiler.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/test/web_profiler.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/translation.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/validator.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/packages/validator.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/annotations.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/routes/annotations.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/dev/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/routes/dev/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/dev/web_profiler.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/routes/dev/web_profiler.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.override.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.override.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php.ini" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/php.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/phpunit.xml.dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/style/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/public/assets/style/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/NeuralAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/NeuralAdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/NeuralNetworkController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/NeuralNetworkController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/DataFixtures/UserFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Entity/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Analysis.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Entity/Analysis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/ClassificationLearningData.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Entity/ClassificationLearningData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/File.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Entity/File.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/LearningData.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Entity/LearningData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/NeuralNetworkData.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Entity/NeuralNetworkData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/SegmentationLearningData.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Entity/SegmentationLearningData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Extension/MenuExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Extension/MenuExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/EditAnalysisType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/EditAnalysisType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/NewAnalysisType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/NewAnalysisType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/NewClassificationDataType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/NewClassificationDataType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/NewSegmentationDataType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/NewSegmentationDataType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/NewUserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/NewUserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Migrations/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Repository/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/AnalysisRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Repository/AnalysisRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ClassificationLearningDataRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Repository/ClassificationLearningDataRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/FileRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Repository/FileRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/NeuralNetworkDataRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Repository/NeuralNetworkDataRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/SegmentationLearningDataRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Repository/SegmentationLearningDataRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ScheduleManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Service/ScheduleManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/adminHome.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/admin/adminHome.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/notImplemented.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/admin/notImplemented.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/analysis/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/analysis/create.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/analysis/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/analysis/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/analysis/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/analysis/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/analysis/table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/analysis/table.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bundles/PlumTreeSystemsUserBundle/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/bundles/PlumTreeSystemsUserBundle/security/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/flashMessages.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/flashMessages.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/menuBase.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/menuBase.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/teachingData/classification/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/teachingData/classification/create.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/teachingData/classification/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/teachingData/classification/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/teachingData/classification/table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/teachingData/classification/table.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/teachingData/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/teachingData/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/teachingData/segmentation/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/teachingData/segmentation/create.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/teachingData/segmentation/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/teachingData/segmentation/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/teachingData/segmentation/table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/teachingData/segmentation/table.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/temp.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/temp.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/notImplemented.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/user/notImplemented.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/userHome.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/user/userHome.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/tests/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/translations/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/translations/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/symfony.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,31 +37,6 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="uicore: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="uicore: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="analysis: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="uicore: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="uicore_file: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -198,6 +75,113 @@
       </server>
     </servers>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/uicore/vendor/ocramius/package-versions" />
+      <path value="$PROJECT_DIR$/uicore/vendor/composer" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/contracts" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/uicore/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/orm-pack" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/inflector" />
+      <path value="$PROJECT_DIR$/uicore/vendor/easycorp/easy-log-handler" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/panther" />
+      <path value="$PROJECT_DIR$/uicore/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/uicore/vendor/plumtreesystems/user-bundle" />
+      <path value="$PROJECT_DIR$/uicore/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/uicore/vendor/plumtreesystems/file-bundle" />
+      <path value="$PROJECT_DIR$/uicore/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/uicore/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/uicore/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/profiler-pack" />
+      <path value="$PROJECT_DIR$/uicore/vendor/facebook/webdriver" />
+      <path value="$PROJECT_DIR$/uicore/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/uicore/vendor/knplabs/gaufrette" />
+      <path value="$PROJECT_DIR$/uicore/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/uicore/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/uicore/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/uicore/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/uicore/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/uicore/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/uicore/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/uicore/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/uicore/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/uicore/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/uicore/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/uicore/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/serializer-pack" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/uicore/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/test-pack" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/debug-pack" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/security" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/web-server-bundle" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/uicore/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/uicore/vendor/symfony/web-profiler-bundle" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="1RbslyFi0e9oLZFYBfbWSpWkuxH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -206,24 +190,25 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tensor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Form" />
-      <recent name="$PROJECT_DIR$/src/Repository" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/templates/admin" />
-      <recent name="$PROJECT_DIR$/src/Extension" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tensor/server" />
       <recent name="$PROJECT_DIR$/uicore" />
       <recent name="$PROJECT_DIR$/templates/user" />
       <recent name="$PROJECT_DIR$/templates/admin" />
       <recent name="$PROJECT_DIR$/templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tensor" />
+      <recent name="$PROJECT_DIR$/uicore/var" />
+      <recent name="$PROJECT_DIR$/src/Form" />
+      <recent name="$PROJECT_DIR$/src/Repository" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -266,7 +251,9 @@
       <workItem from="1570515776073" duration="1434000" />
       <workItem from="1571608604620" duration="535000" />
       <workItem from="1571650839682" duration="10000" />
-      <workItem from="1571768788262" duration="1117000" />
+      <workItem from="1571768788262" duration="4607000" />
+      <workItem from="1571819601172" duration="47000" />
+      <workItem from="1572202497639" duration="2837000" />
     </task>
     <task id="LOCAL-00001" summary="Added a analyses creation and view, segmentation and classification data creation and view">
       <created>1559076385488</created>
