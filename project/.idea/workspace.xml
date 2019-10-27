@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37ece15-c1c7-425a-b00c-2bc621d2ab5f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensor/segmentation" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,18 +37,19 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="uicore: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
     </expand>
     <select />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>User</find>
-      <find>PTSFile</find>
-    </findStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/vendor/plumtreesystems/file-bundle</dir>
-      <dir>$PROJECT_DIR$/vendor/plumtreesystems/</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -184,25 +190,25 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tensor/segmentation/slim" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tensor/segmentation/deeplab" />
       <recent name="$PROJECT_DIR$/tensor/server" />
       <recent name="$PROJECT_DIR$/uicore" />
       <recent name="$PROJECT_DIR$/templates/user" />
       <recent name="$PROJECT_DIR$/templates/admin" />
-      <recent name="$PROJECT_DIR$/templates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tensor/segmentation/slim" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/mysql/database" />
       <recent name="$PROJECT_DIR$/mysql" />
       <recent name="$PROJECT_DIR$/tensor" />
-      <recent name="$PROJECT_DIR$/uicore/var" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -247,7 +253,7 @@
       <workItem from="1571650839682" duration="10000" />
       <workItem from="1571768788262" duration="4607000" />
       <workItem from="1571819601172" duration="47000" />
-      <workItem from="1572202497639" duration="3017000" />
+      <workItem from="1572202497639" duration="11169000" />
     </task>
     <task id="LOCAL-00001" summary="Added a analyses creation and view, segmentation and classification data creation and view">
       <created>1559076385488</created>
