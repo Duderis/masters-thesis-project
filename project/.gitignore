@@ -6,6 +6,7 @@
 /uicore/public/bundles/
 /uicore/var/
 /vendor/
+/mysql/database/*
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
