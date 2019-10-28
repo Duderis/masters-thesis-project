@@ -11,7 +11,7 @@ use PlumTreeSystems\FileBundle\Entity\File as PTSFile;
  * @ORM\Table(name="uicore_file")
  * @ORM\Entity(repositoryClass="App\Repository\FileRepository")
  */
-class File  extends PTSFile
+class File extends PTSFile
 {
 
     /**

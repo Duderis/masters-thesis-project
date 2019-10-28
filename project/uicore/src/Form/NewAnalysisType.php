@@ -18,7 +18,8 @@ class NewAnalysisType extends AbstractType
                 'required' => true
             ])
             ->add('analysisTarget', PTSFileType::class, [
-                'multiple' => false
+                'multiple' => false,
+                'path' => 'analyses/'
             ])
         ;
     }

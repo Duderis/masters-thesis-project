@@ -16,6 +16,7 @@ services:
             context: ./tensor
         volumes:
             - ./tensor:/magic
+            - ./uicore/files:/magic/data
         working_dir: /magic
         runtime:
             nvidia
