@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37ece15-c1c7-425a-b00c-2bc621d2ab5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/uicore/src/Service/PythonCommunicationAdapter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/data_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/data_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/server/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/php.ini" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/php.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Entity/File.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Entity/File.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Form/NewAnalysisType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/NewAnalysisType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/symfony.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Service/PythonCommunicationOverTcpAdapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Service/Communication/PythonCommunicationOverTcpAdapter.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -196,19 +192,19 @@
     <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tensor/segmentation/deeplab" />
-      <recent name="$PROJECT_DIR$/tensor/server" />
-      <recent name="$PROJECT_DIR$/uicore" />
-      <recent name="$PROJECT_DIR$/templates/user" />
-      <recent name="$PROJECT_DIR$/templates/admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tensor/segmentation/slim" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/mysql/database" />
       <recent name="$PROJECT_DIR$/mysql" />
       <recent name="$PROJECT_DIR$/tensor" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/uicore/src/Service/Communication" />
+      <recent name="$PROJECT_DIR$/tensor/segmentation/deeplab" />
+      <recent name="$PROJECT_DIR$/tensor/server" />
+      <recent name="$PROJECT_DIR$/uicore" />
+      <recent name="$PROJECT_DIR$/templates/user" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -257,7 +253,21 @@
       <workItem from="1572218678794" duration="502000" />
       <workItem from="1572255240135" duration="587000" />
       <workItem from="1572286729286" duration="5116000" />
-      <workItem from="1572298086291" duration="2728000" />
+      <workItem from="1572298086291" duration="3307000" />
+      <workItem from="1572334019881" duration="1221000" />
+      <workItem from="1572348638087" duration="21000" />
+      <workItem from="1572815397098" duration="3515000" />
+      <workItem from="1572861075117" duration="61000" />
+      <workItem from="1574189335540" duration="737000" />
+      <workItem from="1574247909144" duration="1204000" />
+      <workItem from="1574290204353" duration="251000" />
+      <workItem from="1574340970262" duration="1980000" />
+      <workItem from="1574418360405" duration="1208000" />
+      <workItem from="1574433608039" duration="3214000" />
+      <workItem from="1574602731255" duration="2696000" />
+      <workItem from="1574674007417" duration="1009000" />
+      <workItem from="1574764930658" duration="4195000" />
+      <workItem from="1574852414946" duration="1819000" />
     </task>
     <task id="LOCAL-00001" summary="Added a analyses creation and view, segmentation and classification data creation and view">
       <created>1559076385488</created>
