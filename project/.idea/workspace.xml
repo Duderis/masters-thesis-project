@@ -2,14 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37ece15-c1c7-425a-b00c-2bc621d2ab5f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/marius.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uicore/src/Controller/NeuralDataController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uicore/src/Service/TeachingManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uicore/templates/teachingData/segmentation_classes_block.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/build_ui_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/build_ui_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/data_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/data_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/server/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Service/PythonCommunicationOverTcpAdapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Service/Communication/PythonCommunicationOverTcpAdapter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Form/NewClassificationDataType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/NewClassificationDataType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Form/NewSegmentationDataType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/NewSegmentationDataType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Service/Communication/PythonCommunicationInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Service/Communication/PythonCommunicationInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Service/Communication/PythonCommunicationOverTcpAdapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Service/Communication/PythonCommunicationOverTcpAdapter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/templates/teachingData/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/teachingData/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/templates/teachingData/segmentation/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/teachingData/segmentation/index.html.twig" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -180,6 +190,11 @@
   </component>
   <component name="ProjectId" id="1RbslyFi0e9oLZFYBfbWSpWkuxH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -189,7 +204,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tensor/segmentation/slim" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -207,15 +222,15 @@
       <recent name="$PROJECT_DIR$/templates/user" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -267,7 +282,42 @@
       <workItem from="1574602731255" duration="2696000" />
       <workItem from="1574674007417" duration="1009000" />
       <workItem from="1574764930658" duration="4195000" />
-      <workItem from="1574852414946" duration="1819000" />
+      <workItem from="1574852414946" duration="2599000" />
+      <workItem from="1574935276416" duration="595000" />
+      <workItem from="1575224245882" duration="4748000" />
+      <workItem from="1575275296632" duration="1205000" />
+      <workItem from="1575499255859" duration="694000" />
+      <workItem from="1575645434990" duration="4160000" />
+      <workItem from="1575818428034" duration="52000" />
+      <workItem from="1575818492599" duration="3722000" />
+      <workItem from="1575885629490" duration="654000" />
+      <workItem from="1575894164523" duration="12000" />
+      <workItem from="1576090777298" duration="4593000" />
+      <workItem from="1576142889236" duration="696000" />
+      <workItem from="1576178132169" duration="5441000" />
+      <workItem from="1576233782065" duration="3069000" />
+      <workItem from="1576493123053" duration="1796000" />
+      <workItem from="1576541187959" duration="607000" />
+      <workItem from="1576577805574" duration="1272000" />
+      <workItem from="1576664851613" duration="4528000" />
+      <workItem from="1576698870110" duration="921000" />
+      <workItem from="1576751018682" duration="598000" />
+      <workItem from="1576770994286" duration="635000" />
+      <workItem from="1576786321309" duration="609000" />
+      <workItem from="1576837459810" duration="1767000" />
+      <workItem from="1577100921971" duration="1370000" />
+      <workItem from="1577449894129" duration="599000" />
+      <workItem from="1577647524528" duration="1179000" />
+      <workItem from="1577706461898" duration="1931000" />
+      <workItem from="1577785960744" duration="1495000" />
+      <workItem from="1577882133358" duration="2494000" />
+      <workItem from="1577963583192" duration="1261000" />
+      <workItem from="1577994924319" duration="606000" />
+      <workItem from="1578041894708" duration="1802000" />
+      <workItem from="1578083889012" duration="599000" />
+      <workItem from="1578085319565" duration="738000" />
+      <workItem from="1578140094239" duration="598000" />
+      <workItem from="1578269162628" duration="1926000" />
     </task>
     <task id="LOCAL-00001" summary="Added a analyses creation and view, segmentation and classification data creation and view">
       <created>1559076385488</created>
@@ -301,6 +351,32 @@
     </ignored-roots>
     <MESSAGE value="Added a analyses creation and view, segmentation and classification data creation and view" />
     <option name="LAST_COMMIT_MESSAGE" value="Added a analyses creation and view, segmentation and classification data creation and view" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="768" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1578270051409">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="768" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1578270051409" />
+    <state x="667" y="364" width="575" height="385" key="NewPhpClassDialog" timestamp="1577886728832">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="667" y="364" width="575" height="385" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1577886728832" />
+    <state x="743" y="265" width="424" height="583" key="RollbackChangesDialog" timestamp="1575834256765">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="743" y="265" width="424" height="583" key="RollbackChangesDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575834256765" />
+    <state x="449" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1575818479888">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575818479888" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1576771005598">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1576771005598" />
+    <state x="685" y="432" width="540" height="249" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1575657756445">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="685" y="432" width="540" height="249" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575657756445" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">

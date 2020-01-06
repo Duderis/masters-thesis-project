@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0fee2a5316400604889bf5f7363919fc",
+    "content-hash": "153d8c8df4500e14fc8570ef121f6065",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -2165,16 +2165,16 @@
         },
         {
             "name": "plumtreesystems/file-bundle",
-            "version": "dev-master",
+            "version": "dev-alternative",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PlumTreeSystems/FileBundle.git",
-                "reference": "6afa62f66a81575dc1ad7961ba424daffd6e844a"
+                "reference": "cdda02a6893b06a59c4a528ab2e32c733c03ef28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PlumTreeSystems/FileBundle/zipball/6afa62f66a81575dc1ad7961ba424daffd6e844a",
-                "reference": "6afa62f66a81575dc1ad7961ba424daffd6e844a",
+                "url": "https://api.github.com/repos/PlumTreeSystems/FileBundle/zipball/cdda02a6893b06a59c4a528ab2e32c733c03ef28",
+                "reference": "cdda02a6893b06a59c4a528ab2e32c733c03ef28",
                 "shasum": ""
             },
             "require": {
@@ -2208,7 +2208,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2019-10-28T21:02:07+00:00"
+            "time": "2019-12-12T20:07:06+00:00"
         },
         {
             "name": "plumtreesystems/user-bundle",

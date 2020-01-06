@@ -13,12 +13,19 @@ class NewSegmentationDataType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        $presetName = md5(time());
         $builder
             ->add('image', PTSFileType::class, [
-                'multiple' => false
+                'multiple' => false,
+                'path' => 'learning/segmentation/label/',
+                'saveExt' => true,
+                'presetName' => $presetName
             ])
             ->add('maskedImage', PTSFileType::class, [
-                'multiple' => false
+                'multiple' => false,
+                'path' => 'learning/segmentation/class/',
+                'saveExt' => true,
+                'presetName' => $presetName
             ])
             ->add('enabled', CheckboxType::class)
         ;

@@ -4,4 +4,8 @@
     <h1>Manage teaching data</h1>
     <a href="{{ path('teachingData_segmentation') }}" class="ui button orange">Segmentation Data</a>
     <a href="{{ path('teachingData_classification') }}" class="ui button orange">Classification Data</a>
+
+    <div style="margin-top:20px">
+        {% include 'teachingData/segmentation_classes_block.html.twig' %}
+    </div>
 {% endblock %}

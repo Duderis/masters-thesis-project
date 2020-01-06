@@ -58,30 +58,31 @@ import tensorflow as tf
 
 FLAGS = tf.app.flags.FLAGS
 
+absoluteBase = '/magic/segmentation/deeplab/datasets/SYS'
+
+tf.app.flags.DEFINE_string('num_shards', "1", 'Number of shards for tfrecords')
+
 tf.app.flags.DEFINE_string('image_folder',
-                           './UI/dataset/JPEGImages',
+                           absoluteBase+'/dataset/JPEGImages',
                            'Folder containing images.')
 
 tf.app.flags.DEFINE_string(
     'semantic_segmentation_folder',
-    './UI/dataset/SegmentationClassRaw',
+    absoluteBase+'/dataset/SegmentationClassRaw',
     'Folder containing semantic segmentation annotations.')
 
 tf.app.flags.DEFINE_string(
     'list_folder',
-    './UI/dataset/ImageSets',
+    absoluteBase+'/dataset/ImageSets',
     'Folder containing lists for training and validation')
 
 tf.app.flags.DEFINE_string(
     'output_dir',
-    './tfrecord',
+    absoluteBase+'/tfrecord',
     'Path to save converted SSTable of TensorFlow examples.')
 
-
-_NUM_SHARDS = 1
-
-
 def _convert_dataset(dataset_split):
+  _NUM_SHARDS = int(FLAGS.num_shards)
   """Converts the specified dataset split to TFRecord format.
 
   Args:

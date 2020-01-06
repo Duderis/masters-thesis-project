@@ -53,6 +53,7 @@ import os
 import tensorflow as tf
 from deeplab import common
 from deeplab import input_preprocess
+import json
 
 # Named tuple to describe the dataset properties.
 DatasetDescriptor = collections.namedtuple(
@@ -66,6 +67,9 @@ DatasetDescriptor = collections.namedtuple(
                         # num_classes=21.
         'ignore_label',  # Ignore label value.
     ])
+
+infoFile = open('/magic/segmentation/deeplab/datasets/trainInfo.txt')
+infoData = json.load(infoFile)
 
 _CITYSCAPES_INFORMATION = DatasetDescriptor(
     splits_to_sizes={
@@ -98,9 +102,9 @@ _ADE20K_INFORMATION = DatasetDescriptor(
 
 _UI_SEG_INFORMATION = DatasetDescriptor(
   splits_to_sizes={
-    'train':2,
-    'trainval':2,
-    'val':2
+    'train':infoData['trainCount'],
+    'trainval':infoData['trainValCount'],
+    'val':infoData['valCount']
   },
   num_classes=5,
   ignore_label=0,

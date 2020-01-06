@@ -15,7 +15,9 @@ class NewClassificationDataType extends AbstractType
     {
         $builder
             ->add('logo', PTSFileType::class, [
-                'multiple' => false
+                'multiple' => false,
+                'path' => 'learning/classification',
+                'saveExt' => true
             ])
             ->add('classification', TextType::class, [
                 'required' => true

@@ -1,0 +1,3 @@
+ln -s ../../../../../data/learning/segmentation/sets ./ImageSets
+ln -s ../../../../../data/learning/segmentation/label ./JPEGImages
+ln -s ../../../../../data/learning/segmentation/class ./SegmentationClass

@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:1.15.0-gpu-jupyter
+FROM tensorflow/tensorflow:1.15.0-gpu
 
 RUN apt-get update && apt-get install python-pil python-numpy -y && \
     pip install jupyter && \
