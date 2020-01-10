@@ -39,12 +39,23 @@ class TeachingManager
         $names = array_map(
             function ($record) {
                 /** @var $record SegmentationLearningData */
-                return $record->getImage()->getName();
+                return preg_replace("/\.+[a-z]{3,4}/", '', $record->getImage()->getName());
             },
             $learningDataRecords
         );
 
         $this->sendSegmentationTfRecords($names);
+    }
+
+    public function trainSegmentation($options = [])
+    {
+        $this->commInterface->sendBody(
+            [
+                'iterationNum' =>
+                    key_exists('iterationNum', $options) ? $options['iterationNum'] : null
+            ],
+            PythonCommunicationOverTcpAdapter::OP_SEG_TRAIN
+        );
     }
 
     private function sendSegmentationTfRecords($names)

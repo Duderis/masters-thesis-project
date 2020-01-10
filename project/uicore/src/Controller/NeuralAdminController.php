@@ -10,10 +10,12 @@ use App\Entity\SegmentationLearningData;
 use App\Form\NewAnalysisType;
 use App\Form\NewClassificationDataType;
 use App\Form\NewSegmentationDataType;
+use App\Form\TrainSegmentationType;
 use App\Repository\AnalysisRepository;
 use App\Repository\ClassificationLearningDataRepository;
 use App\Repository\SegmentationLearningDataRepository;
 use App\Service\ScheduleManager;
+use App\Service\TeachingManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -23,6 +25,20 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class NeuralAdminController extends AbstractController
 {
+
+    /**
+     * @var TeachingManager
+     */
+    private $teachingManager;
+
+    /**
+     * NeuralAdminController constructor.
+     * @param TeachingManager $teachingManager
+     */
+    public function __construct(TeachingManager $teachingManager)
+    {
+        $this->teachingManager = $teachingManager;
+    }
 
     /**
      * @Route("/admin", name="admin_root")
@@ -50,7 +66,22 @@ class NeuralAdminController extends AbstractController
      */
     public function teachingAction(Request $request)
     {
-        return $this->render('admin/notImplemented.html.twig');
+        $segmentationForm = $this->createForm(TrainSegmentationType::class);
+        $segmentationForm->handleRequest($request);
+
+        if ($segmentationForm->isSubmitted() && $segmentationForm->isValid()) {
+            $this->addFlash('success', 'Started segmentation training' );
+            $options = [
+                'iterationNum' => $segmentationForm->get('iterationNum')->getData()
+            ];
+            $this->teachingManager->trainSegmentation($options);
+        }
+
+        return $this->render('trainingViews/index.html.twig',
+            [
+                'segmentationForm' => $segmentationForm->createView()
+            ]
+        );
     }
 
     /**

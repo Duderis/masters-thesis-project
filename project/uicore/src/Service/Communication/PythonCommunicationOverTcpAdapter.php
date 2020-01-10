@@ -14,7 +14,10 @@ class PythonCommunicationOverTcpAdapter implements PythonCommunicationInterface
 
     const OP_PREPARE_SEG_TRAIN = 'prepare_seg_train';
     const OP_OVERRIDE = 'override';
-    const OP_INFER_FILE = 'infer';
+    const OP_INFER_FILE = 'infer_seg';
+    const OP_SEG_TRAIN = 'train_seg';
+    const OP_TRAIN_CLASS = 'train_class';
+    const OP_INFER_CLASS = 'infer_class';
 
     private function openConnection($errno = null, $errstr = null)
     {

@@ -2,23 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37ece15-c1c7-425a-b00c-2bc621d2ab5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/marius.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uicore/src/Controller/NeuralDataController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uicore/src/Service/TeachingManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uicore/templates/teachingData/segmentation_classes_block.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uicore/src/Form/TrainSegmentationType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uicore/templates/trainingViews/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/build_ui_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/build_ui_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/data_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/data_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.override.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.override.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/SYS/tfrecord/trainval-00000-of-00001.tfrecord" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/SYS/tfrecord/trainval-00000-of-00001.tfrecord" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/convert_sys.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/convert_sys.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/server/fileManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/server/fileManager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/server/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Form/NewClassificationDataType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/NewClassificationDataType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Form/NewSegmentationDataType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/NewSegmentationDataType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Service/Communication/PythonCommunicationInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Service/Communication/PythonCommunicationInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Controller/NeuralAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/NeuralAdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uicore/src/Service/Communication/PythonCommunicationOverTcpAdapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Service/Communication/PythonCommunicationOverTcpAdapter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/templates/teachingData/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/teachingData/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/templates/teachingData/segmentation/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/teachingData/segmentation/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Service/TeachingManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Service/TeachingManager.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,6 +312,15 @@
       <workItem from="1578085319565" duration="738000" />
       <workItem from="1578140094239" duration="598000" />
       <workItem from="1578269162628" duration="1926000" />
+      <workItem from="1578297460766" duration="1138000" />
+      <workItem from="1578355959146" duration="1975000" />
+      <workItem from="1578395740263" duration="2433000" />
+      <workItem from="1578481346057" duration="1095000" />
+      <workItem from="1578513512165" duration="392000" />
+      <workItem from="1578562869982" duration="10000" />
+      <workItem from="1578614818728" duration="2108000" />
+      <workItem from="1578653200817" duration="69000" />
+      <workItem from="1578689796734" duration="2897000" />
     </task>
     <task id="LOCAL-00001" summary="Added a analyses creation and view, segmentation and classification data creation and view">
       <created>1559076385488</created>
@@ -353,14 +356,24 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added a analyses creation and view, segmentation and classification data creation and view" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="768" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1578270051409">
+    <state x="683" y="358" width="543" height="398" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578357024938">
       <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="683" y="358" width="543" height="398" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1578357024938" />
+    <state x="2688" y="251" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1578692149878">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="768" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1578270051409" />
-    <state x="667" y="364" width="575" height="385" key="NewPhpClassDialog" timestamp="1577886728832">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="2688" y="251" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578692149878" />
+    <state x="2638" y="242" key="#xdebugger.evaluate" timestamp="1578692250494">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2638" y="242" key="#xdebugger.evaluate/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578692250494" />
+    <state x="2587" y="346" width="575" height="385" key="NewPhpClassDialog" timestamp="1578691288754">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="667" y="364" width="575" height="385" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1577886728832" />
+    <state x="2587" y="346" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578691288754" />
     <state x="743" y="265" width="424" height="583" key="RollbackChangesDialog" timestamp="1575834256765">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -369,6 +382,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575818479888" />
+    <state x="2528" y="267" width="703" height="546" key="find.popup" timestamp="1578691930817">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2528" y="267" width="703" height="546" key="find.popup/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578691930817" />
     <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1576771005598">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -378,18 +395,20 @@
     </state>
     <state x="685" y="432" width="540" height="249" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575657756445" />
   </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="evaluateExpression">
-      <expression>
-        <expression-string>$this-&gt;getUser()</expression-string>
-        <language-id>PHP</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>$tokenStorage-&gt;getToken()</expression-string>
-        <language-id>PHP</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/uicore/src/Controller/NeuralAdminController.php</url>
+          <line>76</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/uicore/src/Controller/NeuralAdminController.php</url>
+          <line>72</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

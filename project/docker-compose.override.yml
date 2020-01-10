@@ -2,5 +2,5 @@ version: '2.3'
 services:
     uicore:
         environment:
-            XDEBUG_CONFIG: "remote_host=192.168.0.104"
+            XDEBUG_CONFIG: "remote_host=192.168.0.103"
             PHP_IDE_CONFIG: "serverName=uicore.local"

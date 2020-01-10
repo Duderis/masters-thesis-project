@@ -1,6 +1,6 @@
 #!/bin/bash
 WORK_DIR="/magic/segmentation/deeplab/datasets/SYS"
-ROOT="${WORK_DIR}/dataset/"
+ROOT="${WORK_DIR}/dataset"
 SEG_FOLDER="${ROOT}/SegmentationClass"
 SEMANTIC_SEG_FOLDER="${ROOT}/SegmentationClassRaw"
 # Build TFRecords of the dataset.

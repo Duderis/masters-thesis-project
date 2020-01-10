@@ -19,6 +19,6 @@ class FileManager(object):
         trainValFile.close()
 
     def writeInfoFile(self, info):
-        dataFile = open("/magic/segmentation/deeplab/datasets/trainInfo.txt")
+        dataFile = open("/magic/segmentation/deeplab/datasets/trainInfo.json", 'w')
         json.dump(info, dataFile)
         dataFile.close()
