@@ -2,17 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37ece15-c1c7-425a-b00c-2bc621d2ab5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/uicore/src/Form/TrainSegmentationType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uicore/templates/trainingViews/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uicore/public/assets/style/semanticOverrides.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uicore/src/Controller/AdminAnalysesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uicore/src/Controller/TaughtModelController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uicore/src/Form/RunAnalysesType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uicore/templates/analysisViews/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uicore/templates/taughtViews/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uicore/templates/taughtViews/table.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uicore/templates/trainingViews/classification/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uicore/templates/trainingViews/segmentation/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.override.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.override.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/SYS/tfrecord/trainval-00000-of-00001.tfrecord" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/SYS/tfrecord/trainval-00000-of-00001.tfrecord" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/convert_sys.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/convert_sys.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/server/fileManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/server/fileManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/server/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Controller/NeuralAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/NeuralAdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Service/Communication/PythonCommunicationOverTcpAdapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Service/Communication/PythonCommunicationOverTcpAdapter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/public/assets/style/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/public/assets/style/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Extension/MenuExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Extension/MenuExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Repository/AnalysisRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Repository/AnalysisRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uicore/src/Service/TeachingManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Service/TeachingManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/templates/menuBase.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/menuBase.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/templates/teachingData/segmentation/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/teachingData/segmentation/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/templates/trainingViews/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/trainingViews/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +59,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="uicore: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="uicore: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="taught_model: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -65,6 +79,7 @@
       </set>
     </option>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="f3e4f572-4142-4796-8cbb-fedef53b4f99" name="localhost" use_path_mappings="true">
@@ -195,19 +210,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tensor/segmentation/slim" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/uicore/templates/taughtViews" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tensor/segmentation/slim" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/mysql/database" />
-      <recent name="$PROJECT_DIR$/mysql" />
-      <recent name="$PROJECT_DIR$/tensor" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/uicore/src/Service/Communication" />
       <recent name="$PROJECT_DIR$/tensor/segmentation/deeplab" />
@@ -215,13 +223,55 @@
       <recent name="$PROJECT_DIR$/uicore" />
       <recent name="$PROJECT_DIR$/templates/user" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/uicore/templates/taughtViews" />
+      <recent name="$PROJECT_DIR$/tensor/segmentation/slim" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/mysql/database" />
+      <recent name="$PROJECT_DIR$/mysql" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@794f3faf" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@66b73225" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@55e12e98" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@6af43b4e" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@2d67a4dc" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@3da7dfdb" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -321,6 +371,9 @@
       <workItem from="1578614818728" duration="2108000" />
       <workItem from="1578653200817" duration="69000" />
       <workItem from="1578689796734" duration="2897000" />
+      <workItem from="1578908635455" duration="6000" />
+      <workItem from="1578948215448" duration="5782000" />
+      <workItem from="1578988936861" duration="20002000" />
     </task>
     <task id="LOCAL-00001" summary="Added a analyses creation and view, segmentation and classification data creation and view">
       <created>1559076385488</created>
@@ -360,20 +413,29 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="683" y="358" width="543" height="398" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1578357024938" />
-    <state x="2688" y="251" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1578692149878">
+    <state x="768" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1579013240237">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="768" y="272" width="449" height="576" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579013240237" />
+    <state x="2688" y="251" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579002908840" />
+    <state x="693" y="318" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579013369174">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="693" y="318" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579013369173" />
+    <state x="2613" y="298" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579011273934" />
+    <state x="2638" y="242" key="#xdebugger.evaluate" timestamp="1579021045398">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="768" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1578270051409" />
-    <state x="2688" y="251" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578692149878" />
-    <state x="2638" y="242" key="#xdebugger.evaluate" timestamp="1578692250494">
+    <state x="2638" y="242" key="#xdebugger.evaluate/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579021045398" />
+    <state x="2587" y="346" width="575" height="392" key="NewPhpClassDialog" timestamp="1579011263612">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2638" y="242" key="#xdebugger.evaluate/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578692250494" />
-    <state x="2587" y="346" width="575" height="385" key="NewPhpClassDialog" timestamp="1578691288754">
+    <state x="667" y="364" width="575" height="385" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1578995650175" />
+    <state x="2587" y="346" width="575" height="392" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579011263612" />
+    <state x="2676" y="464" width="397" height="158" key="NewPhpFileDialog" timestamp="1579005141965">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="667" y="364" width="575" height="385" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1577886728832" />
-    <state x="2587" y="346" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578691288754" />
+    <state x="2676" y="464" width="397" height="158" key="NewPhpFileDialog/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579005141965" />
     <state x="743" y="265" width="424" height="583" key="RollbackChangesDialog" timestamp="1575834256765">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -394,21 +456,5 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="685" y="432" width="540" height="249" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575657756445" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/uicore/src/Controller/NeuralAdminController.php</url>
-          <line>76</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/uicore/src/Controller/NeuralAdminController.php</url>
-          <line>72</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

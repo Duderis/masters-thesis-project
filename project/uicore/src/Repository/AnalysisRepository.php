@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Analysis;
+use App\Service\ScheduleManager;
 use Doctrine\ORM\EntityRepository;
 
 class AnalysisRepository extends EntityRepository
@@ -25,6 +26,16 @@ class AnalysisRepository extends EntityRepository
             ->select('COUNT(a)')
             ->where('a.user = :user')
             ->setParameter('user', $user);
+        $query = $qb->getQuery();
+        return $query->getSingleScalarResult();
+    }
+
+    public function getScheduledAnalysisCount()
+    {
+        $qb = $this->createQueryBuilder('a')
+            ->select('COUNT(a)')
+            ->where('a.scheduleState = :scheduleState')
+            ->setParameter('scheduleState', Analysis::SCHEDULE_STATE_PLANNED);
         $query = $qb->getQuery();
         return $query->getSingleScalarResult();
     }

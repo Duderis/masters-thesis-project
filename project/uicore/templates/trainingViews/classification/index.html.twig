@@ -1,0 +1,24 @@
+<div class="teachingActions__mainBlock">
+    <h3>Train Classification Neural Network</h3>
+    {% if not segmentationForm.vars.valid %}
+        <div class="ui negative message">
+            {{ form_errors(segmentationForm.iterationNum) }}
+        </div>
+    {% endif %}
+    <form class="ui form" method="post">
+        <div class="ui inverted segment">
+            <div class="ui inverted accordion">
+                <div class="title">
+                    Detailed options
+                    <i class="dropdown icon"></i>
+                </div>
+                <div class="content">
+                    <p class="transition hidden">Currently not implemented</p>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: flex-end">
+            <button class="ui orange button">Train</button>
+        </div>
+    </form>
+</div>

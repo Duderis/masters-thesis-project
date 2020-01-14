@@ -54,24 +54,30 @@ class MenuExtension extends AbstractExtension
                 'label' => 'Analyses'
             ],
             [
+                'routeName' => 'admin_teach_teachingData',
+                'label' => 'Manage teaching data',
+                'subRoutes' => [
+                    [
+                        'routeName' => 'teachingData_segmentation',
+                        'label' => 'Segmentation',
+                    ],
+                    [
+                        'routeName' => 'teachingData_classification',
+                        'label' => 'Classification'
+                    ]
+                ]
+            ],
+            [
                 'routeName' => 'admin_teach',
                 'label' => 'Teaching actions'
             ],
             [
-                'routeName' => 'admin_teach_teachingData',
-                'label' => 'Manage teaching data'
+                'routeName' => 'admin_taught_index',
+                'label' => 'Manage taught models'
             ],
             [
-                'routeName' => 'admin_teach_taughtModels',
-                'label' => 'Configure taught models'
-            ],
-            [
-                'routeName' => 'admin_run_learning',
-                'label' => 'Launch learning'
-            ],
-            [
-                'routeName' => 'admin_run_analyses',
-                'label' => 'Launch analyses'
+                'routeName' => 'admin_analyses_index',
+                'label' => 'Analyses actions'
             ],
         ];
     }

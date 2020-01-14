@@ -15,6 +15,16 @@
                         >
                             {{ route.label }}
                         </a>
+                        {% if route.subRoutes is defined %}
+                            {% for subRoute in route.subRoutes %}
+                                <a
+                                        href="{{ path(subRoute.routeName) }}"
+                                        class="{% if current_path == subRoute.routeName %}active {% endif %}item subRoute"
+                                >
+                                    <span>{{ subRoute.label }}</span>
+                                </a>
+                            {% endfor %}
+                        {% endif %}
                     {% endfor %}
                 {% endblock %}
                 <div style="height: 100%; display: flex; flex-direction: column; justify-content: flex-end;">

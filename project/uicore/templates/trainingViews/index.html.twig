@@ -1,20 +1,10 @@
 {% extends 'menuBase.html.twig' %}
 
 {% block content %}
-    <div>
-        <h3>Train Segmentation Neural Network</h3>
-        {% if not segmentationForm.vars.valid %}
-            <div class="ui negative message">
-                {{ form_errors(segmentationForm.iterationNum) }}
-            </div>
-        {% endif %}
-        <form class="ui form" method="post">
-            <div class="field">
-                {{ form_label(segmentationForm.iterationNum) }}
-                {{ form_widget(segmentationForm.iterationNum) }}
-            </div>
-            {{ form_row(segmentationForm.submit, { 'label': 'Train', 'attr': {'class': 'ui orange button'} }) }}
-            {{ form_row(segmentationForm._token) }}
-        </form>
+    <h1>Train neural networks</h1>
+    <div class="flex__container--horizontal" style="justify-content: space-evenly">
+        {% include 'trainingViews/segmentation/index.html.twig' %}
+        {% include 'trainingViews/classification/index.html.twig' %}
     </div>
+    <script>$('.ui.accordion').accordion();</script>
 {% endblock %}

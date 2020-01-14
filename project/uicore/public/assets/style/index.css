@@ -1,5 +1,7 @@
 body {
     height: 100%;
+    background-color:#151d28;
+    color: #fff;
 }
 
 .body__container {
@@ -134,4 +136,38 @@ body {
 .table__cell--notFound {
     width: 100%;
     padding: 1em;
+}
+
+.container--bordered, .teachingActions__mainBlock {
+    border: solid 1px #b8b8b8;
+    border-radius: 8px;
+}
+
+.teachingActions__mainBlock {
+    margin: 16px;
+    padding: 16px;
+    flex: 1;
+}
+
+.teachingActions__mainBlock > h3 {
+    transform: translateY(-32px) translateX(8px);
+    background-color: #151d28;
+    width: fit-content;
+    padding: 8px;
+}
+
+a.subRoute > span {
+    display: block;
+    transform: translateX(32px);
+}
+
+.analysesView__count {
+    color: rgba(255, 120, 29, 0.84);;
+    margin-left: 16px;
+    font-size: 2em;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30px;
 }

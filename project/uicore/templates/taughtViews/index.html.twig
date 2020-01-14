@@ -1,0 +1,11 @@
+{% extends 'menuBase.html.twig' %}
+
+{% block content %}
+    <div style="display: flex; justify-content: space-between; align-items: center">
+        <h1>Taught models</h1>
+        <div style="display: flex; justify-content: flex-end; align-items: center">
+        </div>
+    </div>
+    <div class="ui divider"></div>
+    {% include 'taughtViews/table.html.twig' %}
+{% endblock %}

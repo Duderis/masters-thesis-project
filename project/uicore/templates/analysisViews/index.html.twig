@@ -1,0 +1,47 @@
+{% extends 'menuBase.html.twig' %}
+
+{% block content %}
+    <div style="display: flex; justify-content: space-between; align-items: center">
+        <h1>Analyses</h1>
+        <div style="display: flex; justify-content: flex-end; align-items: center">
+        </div>
+    </div>
+    <div class="flex__container--horizontal" style="justify-content: flex-start">
+        <h2 style="display: block">Scheduled analyses</h2>
+        <span class="analysesView__count">{{ scheduledCount }}</span>
+    </div>
+    <div class="teachingActions__mainBlock">
+        <h3>Run analyses</h3>
+        {% if not runAnalysesForm.vars.valid %}
+            <div class="ui negative message">
+                {{ form_errors(runAnalysesForm.iterationNum) }}
+            </div>
+        {% endif %}
+        <form class="ui form flex" method="post">
+            <div class="ui inverted segment">
+                <div class="ui inverted accordion">
+                    <div class="title">
+                        Detailed options
+                        <i class="dropdown icon"></i>
+                    </div>
+                    <div class="content">
+                        <p class="transition hidden">Currently not implemented</p>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                {{ form_label(runAnalysesForm.segmentationModel) }}
+                {{ form_widget(runAnalysesForm.segmentationModel) }}
+            </div>
+            <div class="field">
+                {{ form_label(runAnalysesForm.classificationModel) }}
+                {{ form_widget(runAnalysesForm.classificationModel) }}
+            </div>
+            <div style="display: flex; justify-content: flex-end">
+                {{ form_row(runAnalysesForm.submit, { 'label': 'Train', 'attr': {'class': 'ui orange button'} }) }}
+                {{ form_row(runAnalysesForm._token) }}
+            </div>
+        </form>
+    </div>
+    <script>$('.ui.accordion').accordion();</script>
+{% endblock %}

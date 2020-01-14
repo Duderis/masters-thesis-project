@@ -4,6 +4,8 @@
 namespace App\Service;
 
 use App\Entity\SegmentationLearningData;
+use App\Entity\TaughtModel;
+use App\Repository\TaughtModelRepository;
 use App\Service\Communication\PythonCommunicationInterface;
 use App\Service\Communication\PythonCommunicationOverTcpAdapter;
 use Doctrine\ORM\EntityManagerInterface;
@@ -71,5 +73,13 @@ class TeachingManager
             ],
             PythonCommunicationOverTcpAdapter::OP_PREPARE_SEG_TRAIN
         );
+    }
+
+    public function getTaughtModels($type)
+    {
+        /** @var TaughtModelRepository $taughtModelRepo */
+        $taughtModelRepo = $this->entityManager->getRepository(TaughtModel::class);
+
+        return $taughtModelRepo->findBy(['type' => $type]);
     }
 }
