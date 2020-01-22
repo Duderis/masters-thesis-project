@@ -68,7 +68,7 @@ DatasetDescriptor = collections.namedtuple(
         'ignore_label',  # Ignore label value.
     ])
 
-infoFile = open('/magic/segmentation/deeplab/datasets/trainInfo.txt')
+infoFile = open('/magic/segmentation/deeplab/datasets/trainInfo.json')
 infoData = json.load(infoFile)
 
 _CITYSCAPES_INFORMATION = DatasetDescriptor(

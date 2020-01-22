@@ -1,7 +1,10 @@
-import subprocess
 import os
 import json
 from fileManager import FileManager
+from commandHandler import CommandHandler
+from httpHandler import HttpHandler
+import calendar;
+import time;
 
 OPERATION_OVERRIDE = 'override'
 OPERATION_PREPARE_SEGMENTATION_TRAINING_DATA = 'prepare_seg_train'
@@ -12,9 +15,14 @@ OPERATION_INFER_CLASSIFICATION = 'infer_class'
 
 DEFAULT_ITERATION_NUM = 10
 
+PRNT_BLUE = '\033[94m'
+PRNT_ENDC = '\033[0m'
+
 class RequestHandler(object):
     def __init__(self):
         self.__fm = FileManager()
+        self.__cm = CommandHandler()
+        self.__hh = HttpHandler()
 
     def handle_request(self, message):#---------------------------------
         decodedMessage = json.loads(message)
@@ -35,56 +43,78 @@ class RequestHandler(object):
             self.handle_class_infer(body)
 
         else:
-            print('Unsupported message')
-
+            print(PRNT_BLUE+'Unsupported message*****************************************************'+PRNT_ENDC)
 
 
     def handle_override(self, body):#-----------------------------------
-        subprocess.run(body['command'])
-        print('Finished override command')
+        cm = self.__cm
+        cm.handle(body['command'])
+        print(PRNT_BLUE+'Finished override command'+PRNT_ENDC)
 
     def handle_seg_prepare_train(self, body):#--------------------------
         fm = self.__fm
+        cm = self.__cm
         # create train;val;trainval files
         fm.writeToDumbFiles(body['data'])
 
         # modify 255 to 1.0
-        subprocess.run([
+        cm.handle([
             'python', 
             '/magic/segmentation/deeplab/datasets/label.py', 
             '/magic/segmentation/deeplab/datasets/SYS/'
             ])
         
         # generate actual tf records
-        print('converting dataset to tf records')
-        subprocess.run([
+        print(PRNT_BLUE+'converting dataset to tf records*****************************************************'+PRNT_ENDC)
+        cm.handle([
             '/magic/segmentation/deeplab/datasets/convert_sys.sh'
         ])
 
         # define dataset description
-        print('creating/updating info file')
+        print(PRNT_BLUE+'creating/updating info file'+PRNT_ENDC)
         fm.writeInfoFile(body['info'])
-        print('Segmentation training data preparation complete!')
+        print(PRNT_BLUE+'Segmentation training data preparation complete!*****************************************************'+PRNT_ENDC)
 
     def handle_seg_train(self, body):#---------------------------------
-        print('training segmentation net')
+        cm = self.__cm
+        hh = self.__hh
         if 'iterationNum' in body:
             iterationNum = body['iterationNum']
         else:
             iterationNum = DEFAULT_ITERATION_NUM
+
+        # define name as timestamp
+        name = 'segmentation_' + str(calendar.timegm(time.gmtime()))
         
-        subprocess.run([
+        cm.handle([
             '/magic/segmentation/deeplab/train-sys.sh',
-            iterationNum
+            str(iterationNum)
         ])
-        print('Segmentation training complete!')
+            
+        print(PRNT_BLUE+'Segmentation training complete!*****************************************************'+PRNT_ENDC)
+
+        cm.handle([
+            '/magic/segmentation/deeplab/export-sys.sh',
+            str(iterationNum)
+        ])
+
+        cm.handle([
+            '/magic/segmentation/deeplab/archive.sh',
+            str(iterationNum),
+            str(name)
+        ])
+        hh.saveSegmentationModel(name+'.model')
+        print(PRNT_BLUE+'Segmentation model exported!*****************************************************'+PRNT_ENDC)
         
     
     def handle_class_train(self, body):#-------------------------------
-        print('Unsupported message')
+        cm = self.__cm
+        print(PRNT_BLUE+'Unsupported message'+PRNT_ENDC)
 
     def handle_seg_infer(self, body):#---------------------------------
-        print('Unsupported message')
+        cm = self.__cm
+        print(PRNT_BLUE+'Unsupported message'+PRNT_ENDC)
 
     def handle_class_infer(self,body):#--------------------------------
-        print('Unsupported message')
+        cm = self.__cm
+        print(PRNT_BLUE+'Unsupported message'+PRNT_ENDC)

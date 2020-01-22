@@ -1,4 +1,5 @@
-FROM tensorflow/tensorflow:1.15.0-gpu
+# FROM tensorflow/tensorflow:1.15.0-gpu 
+FROM tensorflow/tensorflow:1.15.0-gpu-jupyter
 
 RUN apt-get update && apt-get install python-pil python-numpy -y && \
     pip install jupyter && \
@@ -10,6 +11,16 @@ COPY ./segmentation /magic/segmentation
 
 ENV PYTHONPATH="/magic/segmentation:/magic/segmentation/slim:${PYTHONPATH}"
 ENV TENSOR_CMD_1="echo"
+ENV PYTHONWARNINGS="ignore::DeprecationWarning"
+
+RUN mkdir -p /magic/segmentation/deeplab/datasets/SYS/dataset
+
+RUN cd /magic/segmentation/deeplab/datasets/SYS/dataset && \
+    ln -s ../../../../../data/learning/segmentation/sets ./ImageSets && \
+    ln -s ../../../../../data/learning/segmentation/label ./JPEGImages && \
+    ln -s ../../../../../data/learning/segmentation/class ./SegmentationClass
+RUN cd /magic/segmentation/deeplab/datasets/SYS && \
+    ln -s ../../../../data/models ./models
 
 COPY ./server /magic/server
 

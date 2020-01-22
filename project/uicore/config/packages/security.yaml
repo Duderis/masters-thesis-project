@@ -35,4 +35,5 @@ security:
          - { path: ^/admin, roles: ROLE_ADMIN }
          - { path: ^/home, roles: ROLE_USER }
          - { path: ^/neural, roles: ROLE_USER }
+         - { path: ^/internal, roles: IS_AUTHENTICATED_ANONYMOUSLY }
          - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }

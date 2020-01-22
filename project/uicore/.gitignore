@@ -19,3 +19,7 @@
 
 docker-compose.override.yml
 files
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###

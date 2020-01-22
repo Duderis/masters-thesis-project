@@ -17,4 +17,5 @@ return [
     Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle::class => ['dev' => true, 'test' => true],
     PlumTreeSystems\UserBundle\PlumTreeSystemsUserBundle::class => ['all' => true],
     PlumTreeSystems\FileBundle\PlumTreeSystemsFileBundle::class => ['all' => true],
+    Liip\FunctionalTestBundle\LiipFunctionalTestBundle::class => ['all' => true],
 ];

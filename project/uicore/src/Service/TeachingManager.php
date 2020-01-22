@@ -3,15 +3,19 @@
 
 namespace App\Service;
 
+use App\Entity\File;
 use App\Entity\SegmentationLearningData;
 use App\Entity\TaughtModel;
 use App\Repository\TaughtModelRepository;
 use App\Service\Communication\PythonCommunicationInterface;
 use App\Service\Communication\PythonCommunicationOverTcpAdapter;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\Filesystem\Exception\FileNotFoundException;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class TeachingManager
 {
+
     /**
      * @var PythonCommunicationInterface
      */
@@ -23,14 +27,24 @@ class TeachingManager
     private $entityManager;
 
     /**
+     * @var string
+     */
+    private $modelFolderLocation;
+
+    /**
      * TeachingManager constructor.
      * @param PythonCommunicationInterface $commInterface
      * @param EntityManagerInterface $entityManager
+     * @param $modelFolderLocation
      */
-    public function __construct(PythonCommunicationInterface $commInterface, EntityManagerInterface $entityManager)
-    {
+    public function __construct(
+        PythonCommunicationInterface $commInterface,
+        EntityManagerInterface $entityManager,
+        $modelFolderLocation
+    ) {
         $this->commInterface = $commInterface;
         $this->entityManager = $entityManager;
+        $this->modelFolderLocation = $modelFolderLocation;
     }
 
     public function prepareSegmentationTfRecords()
@@ -81,5 +95,42 @@ class TeachingManager
         $taughtModelRepo = $this->entityManager->getRepository(TaughtModel::class);
 
         return $taughtModelRepo->findBy(['type' => $type]);
+    }
+
+    public function saveModel($fileName)
+    {
+        $filePath = $this->modelFolderLocation.$fileName;
+        if (file_exists($filePath)) {
+            $uploadedFile = new UploadedFile($filePath, $fileName, "application/gzip");
+            $file = new File();
+            $file->setUploadedFileReference($uploadedFile);
+
+//            $file->setName($fileName);
+//            $file->setOriginalName($fileName);
+//
+//            $fileSize = filesize($filePath);
+//            $file->addContext('Content-Type', "application/gzip");
+            $file->addContext('path', "models/");
+            $file->addContext('saveExt', "0");
+            $file->addContext('presetName', $fileName);
+            $file->addContext('nosave', true);
+//            $file->addContext('filesize', $fileSize);
+
+            $items = preg_split('/[_.]/', $fileName);
+            $type = $items[0];
+            $date = $items[1];
+            $dateTime = new \DateTime();
+            $dateTime->setTimestamp($date);
+
+            $model = new TaughtModel();
+            $model->setModelFile($file);
+            $model->setCreationDate($dateTime);
+            $model->setType($type);
+            $model->setEnabled(true);
+            $this->entityManager->persist($model);
+            $this->entityManager->flush();
+            return $model;
+        }
+        throw new FileNotFoundException();
     }
 }

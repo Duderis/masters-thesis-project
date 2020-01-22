@@ -1,5 +1,6 @@
 .ui.inverted.menu {
-    background-color: #18264a;
+    /*background-color: #18264a;*/
+    background-color: #27477d;
 }
 
 .ui.form .field>label {
@@ -7,8 +8,10 @@
 }
 
 .ui.table {
-    background-color: #18264a;
-    color: #bababa;
+    /*background-color: #18264a;*/
+    background-color: #27477d;
+    /*color: #bababa;*/
+    color: #fff;
 }
 
 .ui.table>thead>tr>th {
@@ -30,12 +33,14 @@
     border-color: #3a4a68 !important;
 }
 .ui.inverted.segment {
-    background: #18264a;
+    /*background: #18264a;*/
+    background: #27477d;
     border: solid 1px #fff;
 }
 
 .ui.segment, .ui.message {
-    background: #18264a;
+    /*background: #18264a;*/
+    background: #27477d;
     color: #fff;
 }
 

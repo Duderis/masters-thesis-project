@@ -2,6 +2,8 @@
   <dictionary name="marius">
     <words>
       <w>aggr</w>
+      <w>filesize</w>
+      <w>nosave</w>
     </words>
   </dictionary>
 </component>
