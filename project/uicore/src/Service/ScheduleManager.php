@@ -30,6 +30,7 @@ class ScheduleManager
         $position = 0;
         try {
             $position = $this->analysisRepository->findLastSchedulePosition();
+            $position += 1;
         } catch (NoResultException $exception) {
         }
         $analysis->setSchedulePosition($position);

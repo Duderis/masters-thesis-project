@@ -63,8 +63,11 @@ class NeuralNetworkController extends AbstractController
      * @param ScheduleManager $scheduleManager
      * @return Response
      */
-    public function analysisAction(Request $request, EntityManagerInterface $entityManager, ScheduleManager $scheduleManager)
-    {
+    public function analysisAction(
+        Request $request,
+        EntityManagerInterface $entityManager,
+        ScheduleManager $scheduleManager
+    ) {
         $newAnalysis = new Analysis();
 
         $form = $this->createForm(NewAnalysisType::class, $newAnalysis);

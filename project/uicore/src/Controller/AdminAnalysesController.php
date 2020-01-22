@@ -3,7 +3,6 @@
 
 namespace App\Controller;
 
-
 use App\Entity\Analysis;
 use App\Form\RunAnalysesType;
 use App\Repository\AnalysisRepository;

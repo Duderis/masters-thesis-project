@@ -3,7 +3,6 @@
 
 namespace App\Controller;
 
-
 use App\Entity\User;
 use App\Form\NewUserType;
 use Doctrine\ORM\EntityManagerInterface;

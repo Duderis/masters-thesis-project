@@ -3,7 +3,6 @@
 
 namespace App\Controller;
 
-
 use App\Entity\Analysis;
 use App\Entity\ClassificationLearningData;
 use App\Entity\SegmentationLearningData;
@@ -70,14 +69,15 @@ class NeuralAdminController extends AbstractController
         $segmentationForm->handleRequest($request);
 
         if ($segmentationForm->isSubmitted() && $segmentationForm->isValid()) {
-            $this->addFlash('success', 'Started segmentation training' );
+            $this->addFlash('success', 'Started segmentation training');
             $options = [
                 'iterationNum' => $segmentationForm->get('iterationNum')->getData()
             ];
             $this->teachingManager->trainSegmentation($options);
         }
 
-        return $this->render('trainingViews/index.html.twig',
+        return $this->render(
+            'trainingViews/index.html.twig',
             [
                 'segmentationForm' => $segmentationForm->createView()
             ]

@@ -109,7 +109,12 @@ class TeachingManagerTest extends TestCase
         $file = $teachingManager->saveModel('test_1579654806');
 
         $this->assertNotNull($file);
-        $this->assertSame($file->getModelFile()->getUploadedFileReference()->getClientOriginalName(), 'test_1579654806');
+        $this->assertSame(
+            $file->getModelFile()
+                ->getUploadedFileReference()
+                ->getClientOriginalName(),
+            'test_1579654806'
+        );
 
         $this->expectException(FileNotFoundException::class);
         $teachingManager = new TeachingManager($communication, $entityManagerMock, '');
