@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Statistic">
+    <option name="excludedDirectories">
+      <list>
+        <option value="$PROJECT_DIR$/uicore/bin" />
+        <option value="$PROJECT_DIR$/uicore/config" />
+        <option value="$PROJECT_DIR$/uicore/files" />
+        <option value="$PROJECT_DIR$/uicore/public" />
+        <option value="$PROJECT_DIR$/uicore/src" />
+        <option value="$PROJECT_DIR$/uicore/templates" />
+        <option value="$PROJECT_DIR$/uicore/tests" />
+        <option value="$PROJECT_DIR$/uicore/translations" />
+        <option value="$PROJECT_DIR$/uicore/var" />
+        <option value="$PROJECT_DIR$/tensor/server" />
+        <option value="$PROJECT_DIR$/tensor/segmentation" />
+      </list>
+    </option>
+  </component>
+</project>

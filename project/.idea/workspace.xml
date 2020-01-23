@@ -2,44 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37ece15-c1c7-425a-b00c-2bc621d2ab5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/uicore/config/services_test.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uicore/src/Service/Communication/TestPythonCommunicationAdapter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uicore/tests/Controller/AdminAnalysesControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uicore/tests/Controller/HomeControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uicore/tests/Controller/InternalApiControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uicore/tests/Controller/NeuralAdminControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uicore/tests/Controller/NeuralDataControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uicore/tests/Controller/NeuralNetworkControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uicore/tests/Controller/SecurityControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uicore/tests/Controller/TaughtModelControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uicore/tests/Services/ScheduleManagerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/statistic.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/archive.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/archive.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/SYS/tfrecord/train-00000-of-00001.tfrecord" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/SYS/tfrecord/train-00000-of-00001.tfrecord" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/SYS/tfrecord/trainval-00000-of-00001.tfrecord" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/SYS/tfrecord/trainval-00000-of-00001.tfrecord" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/bin/phpunit" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/bin/phpunit" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Controller/AdminAnalysesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/AdminAnalysesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Controller/InternalApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/InternalApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Controller/NeuralAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/NeuralAdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Controller/NeuralNetworkController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/NeuralNetworkController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Controller/TaughtModelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/TaughtModelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Entity/File.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Entity/File.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Entity/LearningData.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Entity/LearningData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Entity/SegmentationLearningData.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Entity/SegmentationLearningData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Form/EditAnalysisType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/EditAnalysisType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Form/NewAnalysisType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/NewAnalysisType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Form/NewClassificationDataType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/NewClassificationDataType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Form/NewSegmentationDataType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/NewSegmentationDataType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Form/RunAnalysesType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/RunAnalysesType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Form/TrainSegmentationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/TrainSegmentationType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Service/ScheduleManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Service/ScheduleManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/src/Service/TeachingManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Service/TeachingManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uicore/tests/Services/TeachingManagerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/tests/Services/TeachingManagerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/exp/train_on_trainval_set/train/checkpoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/exp/train_on_trainval_set/train/graph.pbtxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/train-00000-of-00004.tfrecord" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/train-00001-of-00004.tfrecord" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/train-00002-of-00004.tfrecord" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/train-00003-of-00004.tfrecord" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/trainval-00000-of-00004.tfrecord" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/trainval-00001-of-00004.tfrecord" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/trainval-00002-of-00004.tfrecord" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/trainval-00003-of-00004.tfrecord" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/val-00000-of-00004.tfrecord" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/val-00001-of-00004.tfrecord" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/val-00002-of-00004.tfrecord" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/val-00003-of-00004.tfrecord" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/label.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/label.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,17 +50,6 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="uicore: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -225,10 +197,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/uicore/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tensor/segmentation" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -363,7 +335,9 @@
       <workItem from="1579597844597" duration="1879000" />
       <workItem from="1579633111762" duration="12277000" />
       <workItem from="1579686498129" duration="1805000" />
-      <workItem from="1579689444734" duration="2723000" />
+      <workItem from="1579689444734" duration="3425000" />
+      <workItem from="1579713888478" duration="795000" />
+      <workItem from="1579732667468" duration="1905000" />
     </task>
     <task id="LOCAL-00001" summary="Added a analyses creation and view, segmentation and classification data creation and view">
       <created>1559076385488</created>
@@ -379,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579021352919</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added one more unit test, added static analysis for web system, added stubs for web tests">
+      <created>1579693909289</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579693909289</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,17 +385,18 @@
     </ignored-roots>
     <MESSAGE value="Added a analyses creation and view, segmentation and classification data creation and view" />
     <MESSAGE value="Added ui elements for easier documentation creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ui elements for easier documentation creation" />
+    <MESSAGE value="Added one more unit test, added static analysis for web system, added stubs for web tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added one more unit test, added static analysis for web system, added stubs for web tests" />
   </component>
   <component name="WindowStateProjectService">
     <state x="543" y="211" width="824" height="691" key="#Servers" timestamp="1579655237406">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="543" y="211" width="824" height="691" key="#Servers/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579655237406" />
-    <state x="683" y="358" width="568" height="405" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579654734161">
+    <state x="683" y="358" width="787" height="405" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579716174543">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="683" y="358" width="568" height="405" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579654734161" />
+    <state x="683" y="358" width="787" height="405" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579716174543" />
     <state x="768" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1579013240237">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -434,10 +416,15 @@
     </state>
     <state x="718" y="263" width="709" height="595" key="#xdebugger.evaluate/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579637307182" />
     <state x="2638" y="242" key="#xdebugger.evaluate/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579021045398" />
-    <state x="2301" y="134" width="1147" height="819" key="CommitChangelistDialog2" timestamp="1579021352746">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="381" y="158" width="1147" height="819" key="CommitChangelistDialog2" timestamp="1579693909103">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
+    <state x="381" y="158" key="CommitChangelistDialog2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579693909103" />
     <state x="2301" y="134" width="1147" height="819" key="CommitChangelistDialog2/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579021352746" />
+    <state x="743" y="314" width="424" height="491" key="FileChooserDialogImpl" timestamp="1579713949958">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="743" y="314" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579713949958" />
     <state width="1083" height="240" key="GridCell.Tab.0.bottom" timestamp="1579655312029">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -499,14 +486,14 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="743" y="265" width="424" height="583" key="RollbackChangesDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579655511281" />
-    <state x="449" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1579655191187">
+    <state x="449" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1579713954389">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579655191187" />
-    <state x="555" y="296" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1579655530888">
+    <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579713954389" />
+    <state x="555" y="296" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1579693911151">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="555" y="296" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579655530888" />
+    <state x="555" y="296" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579693911151" />
     <state x="2475" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579021505226" />
     <state x="2096" y="0" width="1251" height="642" maximized="true" key="dock-window-1" timestamp="1579689735584">
       <screen x="1920" y="0" width="1920" height="1080" />

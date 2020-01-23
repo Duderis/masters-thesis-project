@@ -9,12 +9,13 @@ import os, shutil
 arg1 = sys.argv[1]
 
 # palette (color map) describes the (R, G, B): Label pair
-palette = {(0,   0,   0) : 0 ,
-         (255,  0, 0) : 1,
-         (255, 0, 0): 2,
-         (114, 0, 255): 3,
-         (0, 5, 255): 4
-         }
+palette = {
+    (0,0,0):0,
+    (255,0,218):1,
+    (255,0,0):2,
+    (114,0,255):3,
+    (0,5,255):4
+}
 
 def convert_from_color_segmentation(arr_3d):
     arr_2d = np.zeros((arr_3d.shape[0], arr_3d.shape[1]), dtype=np.uint8)

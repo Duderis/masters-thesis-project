@@ -1,3 +1,0 @@
-model_checkpoint_path: "/magic/segmentation/deeplab/datasets/UI/exp/train_on_trainval_set/train/model.ckpt-20"
-all_model_checkpoint_paths: "/magic/segmentation/deeplab/datasets/UI/exp/train_on_trainval_set/train/model.ckpt-0"
-all_model_checkpoint_paths: "/magic/segmentation/deeplab/datasets/UI/exp/train_on_trainval_set/train/model.ckpt-20"

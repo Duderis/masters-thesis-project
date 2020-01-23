@@ -1,7 +1,8 @@
 # FROM tensorflow/tensorflow:1.15.0-gpu 
 FROM tensorflow/tensorflow:1.15.0-gpu-jupyter
+RUN ln -fs /usr/share/zoneinfo/Europe/Vilnius /etc/localtime
 
-RUN apt-get update && apt-get install python-pil python-numpy -y && \
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install python-pil python-numpy python-tk -y && \
     pip install jupyter && \
     pip install matplotlib && \
     pip install PrettyTable && \
@@ -16,11 +17,12 @@ ENV PYTHONWARNINGS="ignore::DeprecationWarning"
 RUN mkdir -p /magic/segmentation/deeplab/datasets/SYS/dataset
 
 RUN cd /magic/segmentation/deeplab/datasets/SYS/dataset && \
-    ln -s ../../../../../data/learning/segmentation/sets ./ImageSets && \
-    ln -s ../../../../../data/learning/segmentation/label ./JPEGImages && \
-    ln -s ../../../../../data/learning/segmentation/class ./SegmentationClass
+    ln -sf ../../../../../data/learning/segmentation/sets ./ImageSets && \
+    ln -sf ../../../../../data/learning/segmentation/label ./JPEGImages && \
+    ln -sf ../../../../../data/learning/segmentation/class ./SegmentationClass    
 RUN cd /magic/segmentation/deeplab/datasets/SYS && \
-    ln -s ../../../../data/models ./models
+    ln -sf ../../../../data/models ./models && \
+    ln -sf ../../../../data/analyses ./analyses
 
 COPY ./server /magic/server
 
