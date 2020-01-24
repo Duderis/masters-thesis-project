@@ -5,6 +5,8 @@ namespace App\Repository;
 use App\Entity\Analysis;
 use App\Service\ScheduleManager;
 use Doctrine\ORM\EntityRepository;
+use PlumTreeSystems\FileBundle\Entity\File;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class AnalysisRepository extends EntityRepository
 {
@@ -18,6 +20,21 @@ class AnalysisRepository extends EntityRepository
             ->setParameter('state', Analysis::SCHEDULE_STATE_PLANNED);
         $query = $qb->getQuery();
         return $query->getSingleScalarResult();
+    }
+
+    public function findWithFilename($filename)
+    {
+        $qb = $this->createQueryBuilder('a')
+            ->leftJoin('a.analysisTarget', 'f')
+            ->where('f.name = :name')
+            ->setParameter('name', $filename)
+            ->select('a.id');
+        $query = $qb->getQuery();
+        $id = $query->getSingleScalarResult();
+        if ($id) {
+            return $this->find($id);
+        }
+        throw new NotFoundHttpException();
     }
 
     public function getAnalysisCount($user)

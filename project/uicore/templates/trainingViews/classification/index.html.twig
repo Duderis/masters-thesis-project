@@ -1,8 +1,8 @@
 <div class="teachingActions__mainBlock">
     <h3>Train Classification Neural Network</h3>
-    {% if not segmentationForm.vars.valid %}
+    {% if not classificationForm.vars.valid %}
         <div class="ui negative message">
-            {{ form_errors(segmentationForm.iterationNum) }}
+            {{ form_errors(classificationForm.iterationNum) }}
         </div>
     {% endif %}
     <form class="ui form" method="post">
@@ -18,7 +18,8 @@
             </div>
         </div>
         <div style="display: flex; justify-content: flex-end">
-            <button class="ui orange button">Train</button>
+            {{ form_row(classificationForm.submit, { 'label': 'Train', 'attr': {'class': 'ui orange button'} }) }}
+            {{ form_row(classificationForm._token) }}
         </div>
     </form>
 </div>

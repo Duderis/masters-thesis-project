@@ -74,6 +74,14 @@ class TeachingManager
         );
     }
 
+    public function trainClassification($options = [])
+    {
+        $this->commInterface->sendBody(
+            [],
+            PythonCommunicationOverTcpAdapter::OP_TRAIN_CLASS
+        );
+    }
+
     private function sendSegmentationTfRecords($names)
     {
         $this->commInterface->sendBody(
@@ -89,6 +97,14 @@ class TeachingManager
         );
     }
 
+    public function sendClassificationPrepare()
+    {
+        $this->commInterface->sendBody(
+            [],
+            PythonCommunicationOverTcpAdapter::OP_PREPARE_CLASS_TRAIN
+        );
+    }
+
     public function getTaughtModels($type)
     {
         /** @var TaughtModelRepository $taughtModelRepo */
@@ -101,7 +117,14 @@ class TeachingManager
     {
         $filePath = $this->modelFolderLocation.$fileName;
         if (file_exists($filePath)) {
-            $uploadedFile = new UploadedFile($filePath, $fileName, "application/gzip");
+            $items = preg_split('/[_.]/', $fileName);
+            $type = $items[0];
+            $date = $items[1];
+            $mime = 'application/octet-stream';
+            if ($type === 'segmentation') {
+                $mime = 'application/gzip';
+            }
+            $uploadedFile = new UploadedFile($filePath, $fileName, $mime);
             $file = new File();
             $file->setUploadedFileReference($uploadedFile);
 
@@ -116,9 +139,7 @@ class TeachingManager
             $file->addContext('nosave', true);
 //            $file->addContext('filesize', $fileSize);
 
-            $items = preg_split('/[_.]/', $fileName);
-            $type = $items[0];
-            $date = $items[1];
+
             $dateTime = new \DateTime();
             $dateTime->setTimestamp($date);
 

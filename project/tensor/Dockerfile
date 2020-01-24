@@ -3,10 +3,13 @@ FROM tensorflow/tensorflow:1.15.0-gpu-jupyter
 RUN ln -fs /usr/share/zoneinfo/Europe/Vilnius /etc/localtime
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install python-pil python-numpy python-tk -y && \
-    pip install jupyter && \
-    pip install matplotlib && \
-    pip install PrettyTable && \
-    pip install tqdm
+    pip install jupyter \
+    matplotlib \
+    PrettyTable \
+    tqdm \
+    pyyaml \
+    h5py \
+    scipy
 
 COPY ./segmentation /magic/segmentation
 
@@ -22,7 +25,16 @@ RUN cd /magic/segmentation/deeplab/datasets/SYS/dataset && \
     ln -sf ../../../../../data/learning/segmentation/class ./SegmentationClass    
 RUN cd /magic/segmentation/deeplab/datasets/SYS && \
     ln -sf ../../../../data/models ./models && \
-    ln -sf ../../../../data/analyses ./analyses
+    ln -sf ../../../../data/analyses ./analyses && \
+    ln -sf ../../../../data/results ./results && \
+    ln -sf ../../../../data/analyses_further ./analyses_further 
+
+RUN mkdir -p /magic/classification/dataset/real
+RUN cd /magic/classification/dataset && \
+    ln -sf ../../data/learning/classification/original ./original && \
+    ln -sf ../../data/models ./models && \
+    ln -sf ../../data/results ./results && \
+    ln -sf ../../data/analyses_further ./analyses_further
 
 COPY ./server /magic/server
 

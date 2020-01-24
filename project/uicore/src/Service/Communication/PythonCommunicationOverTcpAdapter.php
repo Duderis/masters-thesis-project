@@ -13,11 +13,13 @@ class PythonCommunicationOverTcpAdapter implements PythonCommunicationInterface
     const HOSTNAME = 'tensor';
 
     const OP_PREPARE_SEG_TRAIN = 'prepare_seg_train';
+    const OP_PREPARE_CLASS_TRAIN = 'prepare_class_train';
     const OP_OVERRIDE = 'override';
     const OP_INFER_FILE = 'infer_seg';
     const OP_SEG_TRAIN = 'train_seg';
     const OP_TRAIN_CLASS = 'train_class';
     const OP_INFER_CLASS = 'infer_class';
+    const OP_ANALYZE = 'analyze';
 
     private function openConnection($errno = null, $errstr = null)
     {

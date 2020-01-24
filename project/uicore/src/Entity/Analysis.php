@@ -52,6 +52,13 @@ class Analysis
     private $analysisTarget;
 
     /**
+     * @var File
+     * @ORM\OneToOne(targetEntity="File", cascade={"persist"})
+     * @ORM\JoinColumn(name="result_file_id", referencedColumnName="id", onDelete="SET NULL")
+     */
+    private $segmentationResult;
+
+    /**
      * @var string
      * @ORM\Column(type="string")
      */
@@ -173,6 +180,24 @@ class Analysis
     public function setAnalysisTarget($analysisTarget): Analysis
     {
         $this->analysisTarget = $analysisTarget;
+        return $this;
+    }
+
+    /**
+     * @return File
+     */
+    public function getSegmentationResult(): File
+    {
+        return $this->segmentationResult;
+    }
+
+    /**
+     * @param File $segmentationResult
+     * @return Analysis
+     */
+    public function setSegmentationResult(File $segmentationResult): Analysis
+    {
+        $this->segmentationResult = $segmentationResult;
         return $this;
     }
 

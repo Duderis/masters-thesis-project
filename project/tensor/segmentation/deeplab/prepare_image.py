@@ -4,7 +4,7 @@ from PIL import Image, ImageOps
 SIZE = 326, 326
 
 def autocropImage(image, border = 0):
-    r,g,b,a = image.split()
+    r,g,b,_ = image.split()
     image = Image.merge('RGB', (r,g,b))
     image = ImageOps.invert(image)
     # Get the bounding box
@@ -33,9 +33,9 @@ def resizeImage(image):
     resizedImage = image.resize(SIZE)
     return resizedImage
     
-if len(sys.argv) < 3:
+if len(sys.argv) < 2:
     # Not enough arguments -- show usage information and exit
-    print "Usage: " + sys.argv[0] + " infile outfile [border]"
+    print "Usage: " + sys.argv[0] + " infile"
     exit(1)
 
 # Get input and output file names
@@ -45,7 +45,7 @@ infile = sys.argv[1]
 image = Image.open(infile)
 
 # Do the cropping
-image = autocropImage(image, border)
+image = autocropImage(image)
 
 # Do the resizing
 image = resizeImage(image)

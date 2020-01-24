@@ -14,15 +14,27 @@ class EditAnalysisType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        $choices = [
+            'planned' => Analysis::SCHEDULE_STATE_PLANNED,
+            'cancelled' => Analysis::SCHEDULE_STATE_CANCELLED
+        ];
+        if (
+            $options['data'] &&
+            $options['data']->getId() &&
+            $options['data']->getScheduleState()===Analysis::SCHEDULE_STATE_COMPLETE
+        ) {
+            $choices = [
+                'complete' => Analysis::SCHEDULE_STATE_COMPLETE,
+                'planned' => Analysis::SCHEDULE_STATE_PLANNED,
+                'cancelled' => Analysis::SCHEDULE_STATE_CANCELLED
+            ];
+        }
         $builder
             ->add('name', TextType::class, [
                 'required' => true
             ])
             ->add('scheduleState', ChoiceType::class, [
-                'choices' => [
-                    'planned' => Analysis::SCHEDULE_STATE_PLANNED,
-                    'cancelled' => Analysis::SCHEDULE_STATE_CANCELLED
-                ]
+                'choices' => $choices
             ])
         ;
     }

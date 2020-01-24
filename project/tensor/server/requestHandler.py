@@ -3,15 +3,15 @@ import json
 from fileManager import FileManager
 from commandHandler import CommandHandler
 from httpHandler import HttpHandler
-import calendar;
-import time;
+import calendar
+import time
 
 OPERATION_OVERRIDE = 'override'
 OPERATION_PREPARE_SEGMENTATION_TRAINING_DATA = 'prepare_seg_train'
+OPERATION_PREPARE_CLASSIFICATION_TRAINING_DATA = 'prepare_class_train'
 OPERATION_TRAIN_SEGMENTATION = 'train_seg'
 OPERATION_TRAIN_CLASSIFICATION = 'train_class'
-OPERATION_INFER_SEGMENTATION = 'infer_seg'
-OPERATION_INFER_CLASSIFICATION = 'infer_class'
+OPERATION_ANALYZE = 'analyze'
 
 DEFAULT_ITERATION_NUM = 10
 
@@ -33,17 +33,17 @@ class RequestHandler(object):
             self.handle_override(body)
         elif OPERATION_PREPARE_SEGMENTATION_TRAINING_DATA == op:
             self.handle_seg_prepare_train(body)
+        elif OPERATION_PREPARE_CLASSIFICATION_TRAINING_DATA == op:
+            self.handle_class_prepare_train(body)
         elif OPERATION_TRAIN_SEGMENTATION == op:
             self.handle_seg_train(body)
         elif OPERATION_TRAIN_CLASSIFICATION == op:
             self.handle_class_train(body)            
-        elif OPERATION_INFER_SEGMENTATION == op:
-            self.handle_seg_infer(body)
-        elif OPERATION_INFER_CLASSIFICATION == op:
-            self.handle_class_infer(body)
+        elif OPERATION_ANALYZE == op:
+            self.handle_analyze(body)
 
         else:
-            print(PRNT_BLUE+'Unsupported message*****************************************************'+PRNT_ENDC)
+            print(PRNT_BLUE+'Unsupported message'+PRNT_ENDC)
 
 
     def handle_override(self, body):#-----------------------------------
@@ -65,7 +65,7 @@ class RequestHandler(object):
             ])
         
         # generate actual tf records
-        print(PRNT_BLUE+'converting dataset to tf records*****************************************************'+PRNT_ENDC)
+        print(PRNT_BLUE+'converting dataset to tf records'+PRNT_ENDC)
         cm.handle([
             '/magic/segmentation/deeplab/datasets/convert_sys.sh'
         ])
@@ -73,7 +73,7 @@ class RequestHandler(object):
         # define dataset description
         print(PRNT_BLUE+'creating/updating info file'+PRNT_ENDC)
         fm.writeInfoFile(body['info'])
-        print(PRNT_BLUE+'Segmentation training data preparation complete!*****************************************************'+PRNT_ENDC)
+        print(PRNT_BLUE+'Segmentation training data preparation complete!'+PRNT_ENDC)
 
     def handle_seg_train(self, body):#---------------------------------
         cm = self.__cm
@@ -91,7 +91,7 @@ class RequestHandler(object):
             str(iterationNum)
         ])
             
-        print(PRNT_BLUE+'Segmentation training complete!*****************************************************'+PRNT_ENDC)
+        print(PRNT_BLUE+'Segmentation training complete!'+PRNT_ENDC)
 
         cm.handle([
             '/magic/segmentation/deeplab/export-sys.sh',
@@ -103,18 +103,76 @@ class RequestHandler(object):
             str(iterationNum),
             str(name)
         ])
-        hh.saveSegmentationModel(name+'.model')
-        print(PRNT_BLUE+'Segmentation model exported!*****************************************************'+PRNT_ENDC)
+        hh.saveModel(name+'.model')
+        print(PRNT_BLUE+'Segmentation model exported!'+PRNT_ENDC)
         
-    
+    def handle_class_prepare_train(self, body):#-----------------------------------
+        cm = self.__cm
+        cm.handle([
+            '/magic/classification/prepare_data.sh'
+        ])
+        print(PRNT_BLUE+'Prepared classification data!'+PRNT_ENDC)
+
     def handle_class_train(self, body):#-------------------------------
         cm = self.__cm
-        print(PRNT_BLUE+'Unsupported message'+PRNT_ENDC)
+        hh = self.__hh 
+        name = 'classification_' + str(calendar.timegm(time.gmtime()))
+        cm.handle([
+            '/magic/classification/train_class.sh',
+            name
+        ]) 
+        hh.saveModel(name+'.model')
+        print(PRNT_BLUE+'Model trained'+PRNT_ENDC)
 
-    def handle_seg_infer(self, body):#---------------------------------
+    # MODEL=$1 --- segModel
+    # TARGET=$2 --- target
+    # SAVE1=$3 further --- target+'str'
+    # SAVE2=$4 detailed --- target+'str'
+    def handle_seg_infer(self, segModel, target):#---------------------------------
         cm = self.__cm
-        print(PRNT_BLUE+'Unsupported message'+PRNT_ENDC)
+        targetParts = target.split('.')
+        cm.handle([
+            '/magic/segmentation/deeplab/eval_one.sh',
+            segModel,
+            target,
+            targetParts[0]+'_result_1'+'.'+targetParts[1],
+            targetParts[0]+'_result_2'+'.'+targetParts[1]
+        ])
+        print(PRNT_BLUE+'Infering with the segmentation network'+PRNT_ENDC)
 
-    def handle_class_infer(self,body):#--------------------------------
+    # MODEL_NAME=$1 --- classModel
+    # ANALYSIS_NAME=$2 --- target+'str'
+    # RESULT_NAME=$3 --- target+'str'
+    def handle_class_infer(self, classModel, target):#--------------------------------
         cm = self.__cm
-        print(PRNT_BLUE+'Unsupported message'+PRNT_ENDC)
+        targetParts = target.split('.')
+        cm.handle([
+            '/magic/classification/eval_one.sh',
+            classModel,
+            targetParts[0]+'_result_1'+'.'+targetParts[1],
+            targetParts[0]+'_result_3'
+        ])
+        print(PRNT_BLUE+'Infering with the classification network'+PRNT_ENDC)
+
+    def handle_analyze(self, body):#----------------------------------
+        hh = self.__hh
+        if 'data' in body:
+            data = body['data']
+        else:
+            raise Exception('No target provided')
+
+        if 'classmodel' in body:
+            classModel = body['classmodel']
+        else:
+            raise Exception('No classmodel provided')
+
+        if 'segmodel' in body:
+            segModel = body['segmodel']
+        else:
+            raise Exception('No segmodel provided')
+
+        for target in data:
+            self.handle_seg_infer(segModel, target)
+            self.handle_class_infer(classModel, target)
+            hh.saveAnalysis(target)
+    

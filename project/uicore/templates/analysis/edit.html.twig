@@ -10,9 +10,28 @@
         </div>
         <div class="field">
             {{ form_label(form.scheduleState) }}
-            {{ form_widget(form.scheduleState) }}
+            {% if analysis.scheduleState == 'COMPLETE' %}
+                {{ form_widget(form.scheduleState, {'disabled':'disabled'}) }}
+            {% else %}
+                {{ form_widget(form.scheduleState) }}
+            {% endif %}
         </div>
         <button class="ui orange button" type="submit">Submit</button>
         {{ form_row(form._token) }}
     {{ form_end(form) }}
+    {% if analysis.scheduleState == 'COMPLETE' %}
+    <div class="teachingActions__mainBlock">
+        <h3>Results</h3>
+        <button class="ui orange button" type="submit"><i class="icon download"></i>Segmentation results</button>
+        <div style="padding-top: 16px">
+            <h4>Classification results</h4>
+            <div>
+                Sidebar: {{ classResult.result | number_format(7) }}
+            </div>
+            <div>
+                Tower: {{ 1 - classResult.result | number_format(7) }}
+            </div>
+        </div>
+    </div>
+    {% endif %}
 {% endblock %}

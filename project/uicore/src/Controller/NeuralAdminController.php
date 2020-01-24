@@ -9,6 +9,7 @@ use App\Entity\SegmentationLearningData;
 use App\Form\NewAnalysisType;
 use App\Form\NewClassificationDataType;
 use App\Form\NewSegmentationDataType;
+use App\Form\TrainClassificationType;
 use App\Form\TrainSegmentationType;
 use App\Repository\AnalysisRepository;
 use App\Repository\ClassificationLearningDataRepository;
@@ -68,6 +69,9 @@ class NeuralAdminController extends AbstractController
         $segmentationForm = $this->createForm(TrainSegmentationType::class);
         $segmentationForm->handleRequest($request);
 
+        $classificationForm = $this->createForm(TrainClassificationType::class);
+        $classificationForm->handleRequest($request);
+
         if ($segmentationForm->isSubmitted() && $segmentationForm->isValid()) {
             $this->addFlash('success', 'Started segmentation training');
             $options = [
@@ -75,11 +79,16 @@ class NeuralAdminController extends AbstractController
             ];
             $this->teachingManager->trainSegmentation($options);
         }
+        if ($classificationForm->isSubmitted() && $classificationForm->isValid()) {
+            $this->addFlash('success', 'Started classification training');
+            $this->teachingManager->trainClassification([]);
+        }
 
         return $this->render(
             'trainingViews/index.html.twig',
             [
-                'segmentationForm' => $segmentationForm->createView()
+                'segmentationForm' => $segmentationForm->createView(),
+                'classificationForm' => $classificationForm->createView()
             ]
         );
     }

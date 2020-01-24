@@ -1,28 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e37ece15-c1c7-425a-b00c-2bc621d2ab5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/statistic.xml" afterDir="false" />
+    <list default="true" id="e37ece15-c1c7-425a-b00c-2bc621d2ab5f" name="Default Changelist" comment="Added one more unit test, added static analysis for web system, added stubs for web tests">
+      <change afterPath="$PROJECT_DIR$/uicore/src/Form/TrainClassificationType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uicore/src/Service/AnalysisManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/classification/train_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/classification/train_class.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/archive.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/archive.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/SYS/tfrecord/train-00000-of-00001.tfrecord" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/SYS/tfrecord/train-00000-of-00001.tfrecord" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/SYS/tfrecord/trainval-00000-of-00001.tfrecord" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/SYS/tfrecord/trainval-00000-of-00001.tfrecord" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/exp/train_on_trainval_set/train/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/exp/train_on_trainval_set/train/graph.pbtxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/train-00000-of-00004.tfrecord" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/train-00001-of-00004.tfrecord" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/train-00002-of-00004.tfrecord" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/train-00003-of-00004.tfrecord" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/trainval-00000-of-00004.tfrecord" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/trainval-00001-of-00004.tfrecord" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/trainval-00002-of-00004.tfrecord" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/trainval-00003-of-00004.tfrecord" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/val-00000-of-00004.tfrecord" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/val-00001-of-00004.tfrecord" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/val-00002-of-00004.tfrecord" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/UI/tfrecord/val-00003-of-00004.tfrecord" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/label.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/datasets/label.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/eval_one.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/eval_one.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/segmentation/deeplab/prepare_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/segmentation/deeplab/prepare_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/server/httpHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/server/httpHandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor/server/requestHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor/server/requestHandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Controller/AdminAnalysesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/AdminAnalysesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Controller/InternalApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/InternalApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Controller/NeuralAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/NeuralAdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Controller/NeuralDataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/NeuralDataController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Controller/NeuralNetworkController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Controller/NeuralNetworkController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Entity/Analysis.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Entity/Analysis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Form/EditAnalysisType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/EditAnalysisType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Form/NewAnalysisType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/NewAnalysisType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Form/NewClassificationDataType.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Form/NewClassificationDataType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Repository/AnalysisRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Repository/AnalysisRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Service/Communication/PythonCommunicationOverTcpAdapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Service/Communication/PythonCommunicationOverTcpAdapter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/src/Service/TeachingManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/src/Service/TeachingManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/templates/analysis/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/analysis/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/templates/analysisViews/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/analysisViews/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/templates/teachingData/classification/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/teachingData/classification/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/templates/teachingData/segmentation/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/teachingData/segmentation/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uicore/templates/trainingViews/classification/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/uicore/templates/trainingViews/classification/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +60,17 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="uicore: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
     </expand>
     <select />
   </component>
@@ -64,6 +84,7 @@
       </set>
     </option>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="f3e4f572-4142-4796-8cbb-fedef53b4f99" name="localhost" use_path_mappings="true">
@@ -203,19 +224,19 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/uicore/files/learning/classification/original" />
+      <recent name="$PROJECT_DIR$/uicore/files/learning/classification" />
+      <recent name="$PROJECT_DIR$/uicore/src/Service/Communication" />
+      <recent name="$PROJECT_DIR$/tensor/segmentation/deeplab" />
+      <recent name="$PROJECT_DIR$/tensor/server" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/uicore/config" />
       <recent name="$PROJECT_DIR$/uicore" />
       <recent name="$PROJECT_DIR$/uicore/files/models" />
       <recent name="$PROJECT_DIR$/uicore/templates/taughtViews" />
       <recent name="$PROJECT_DIR$/tensor/segmentation/slim" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/uicore/src/Service/Communication" />
-      <recent name="$PROJECT_DIR$/tensor/segmentation/deeplab" />
-      <recent name="$PROJECT_DIR$/tensor/server" />
-      <recent name="$PROJECT_DIR$/uicore" />
-      <recent name="$PROJECT_DIR$/templates/user" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -338,6 +359,8 @@
       <workItem from="1579689444734" duration="3425000" />
       <workItem from="1579713888478" duration="795000" />
       <workItem from="1579732667468" duration="1905000" />
+      <workItem from="1579774592721" duration="1206000" />
+      <workItem from="1579788824337" duration="19689000" />
     </task>
     <task id="LOCAL-00001" summary="Added a analyses creation and view, segmentation and classification data creation and view">
       <created>1559076385488</created>
@@ -397,86 +420,86 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="683" y="358" width="787" height="405" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579716174543" />
-    <state x="768" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1579013240237">
+    <state x="768" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1579824145886">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="768" y="272" width="449" height="576" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579013240237" />
+    <state x="768" y="272" width="449" height="576" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579824145886" />
     <state x="2688" y="251" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579002908840" />
     <state x="1054" y="27" width="856" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579689871520">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="1054" y="27" width="856" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579689871520" />
-    <state x="693" y="318" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579688712735">
+    <state x="693" y="318" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579828845081">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="693" y="318" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579688712735" />
+    <state x="693" y="318" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579828845081" />
     <state x="2613" y="298" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579011273934" />
-    <state x="718" y="263" width="709" height="595" key="#xdebugger.evaluate" timestamp="1579637307182">
+    <state x="915" y="322" width="709" height="595" key="#xdebugger.evaluate" timestamp="1579831584123">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="718" y="263" width="709" height="595" key="#xdebugger.evaluate/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579637307182" />
+    <state x="915" y="322" width="709" height="595" key="#xdebugger.evaluate/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579831584123" />
     <state x="2638" y="242" key="#xdebugger.evaluate/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579021045398" />
-    <state x="381" y="158" width="1147" height="819" key="CommitChangelistDialog2" timestamp="1579693909103">
+    <state x="381" y="158" width="1139" height="819" key="CommitChangelistDialog2" timestamp="1579804010292">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="381" y="158" key="CommitChangelistDialog2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579693909103" />
+    <state x="381" y="158" width="1139" height="819" key="CommitChangelistDialog2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579804010292" />
     <state x="2301" y="134" width="1147" height="819" key="CommitChangelistDialog2/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579021352746" />
     <state x="743" y="314" width="424" height="491" key="FileChooserDialogImpl" timestamp="1579713949958">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="743" y="314" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579713949958" />
-    <state width="1083" height="240" key="GridCell.Tab.0.bottom" timestamp="1579655312029">
+    <state width="1874" height="240" key="GridCell.Tab.0.bottom" timestamp="1579831468147">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1083" height="240" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579655312029" />
-    <state width="1083" height="240" key="GridCell.Tab.0.center" timestamp="1579655312029">
+    <state width="1874" height="240" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579831468147" />
+    <state width="1874" height="240" key="GridCell.Tab.0.center" timestamp="1579831468147">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1083" height="240" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579655312029" />
-    <state width="1083" height="240" key="GridCell.Tab.0.left" timestamp="1579655312028">
+    <state width="1874" height="240" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579831468147" />
+    <state width="1874" height="240" key="GridCell.Tab.0.left" timestamp="1579831468147">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1083" height="240" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579655312028" />
-    <state width="1083" height="240" key="GridCell.Tab.0.right" timestamp="1579655312029">
+    <state width="1874" height="240" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579831468147" />
+    <state width="1874" height="240" key="GridCell.Tab.0.right" timestamp="1579831468147">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1083" height="240" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579655312029" />
-    <state width="1083" height="240" key="GridCell.Tab.1.bottom" timestamp="1579655312029">
+    <state width="1874" height="240" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579831468147" />
+    <state width="1874" height="240" key="GridCell.Tab.1.bottom" timestamp="1579831468147">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1083" height="240" key="GridCell.Tab.1.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579655312029" />
-    <state width="1083" height="240" key="GridCell.Tab.1.center" timestamp="1579655312029">
+    <state width="1874" height="240" key="GridCell.Tab.1.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579831468147" />
+    <state width="1874" height="240" key="GridCell.Tab.1.center" timestamp="1579831468147">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1083" height="240" key="GridCell.Tab.1.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579655312029" />
-    <state width="1083" height="240" key="GridCell.Tab.1.left" timestamp="1579655312029">
+    <state width="1874" height="240" key="GridCell.Tab.1.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579831468147" />
+    <state width="1874" height="240" key="GridCell.Tab.1.left" timestamp="1579831468147">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1083" height="240" key="GridCell.Tab.1.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579655312029" />
-    <state width="1083" height="240" key="GridCell.Tab.1.right" timestamp="1579655312029">
+    <state width="1874" height="240" key="GridCell.Tab.1.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579831468147" />
+    <state width="1874" height="240" key="GridCell.Tab.1.right" timestamp="1579831468147">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1083" height="240" key="GridCell.Tab.1.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579655312029" />
-    <state width="1083" height="240" key="GridCell.Tab.2.bottom" timestamp="1579655312029">
+    <state width="1874" height="240" key="GridCell.Tab.1.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579831468147" />
+    <state width="1874" height="240" key="GridCell.Tab.2.bottom" timestamp="1579831468147">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1083" height="240" key="GridCell.Tab.2.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579655312029" />
-    <state width="1083" height="240" key="GridCell.Tab.2.center" timestamp="1579655312029">
+    <state width="1874" height="240" key="GridCell.Tab.2.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579831468147" />
+    <state width="1874" height="240" key="GridCell.Tab.2.center" timestamp="1579831468147">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1083" height="240" key="GridCell.Tab.2.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579655312029" />
-    <state width="1083" height="240" key="GridCell.Tab.2.left" timestamp="1579655312029">
+    <state width="1874" height="240" key="GridCell.Tab.2.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579831468147" />
+    <state width="1874" height="240" key="GridCell.Tab.2.left" timestamp="1579831468147">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1083" height="240" key="GridCell.Tab.2.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579655312029" />
-    <state width="1083" height="240" key="GridCell.Tab.2.right" timestamp="1579655312029">
+    <state width="1874" height="240" key="GridCell.Tab.2.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579831468147" />
+    <state width="1874" height="240" key="GridCell.Tab.2.right" timestamp="1579831468147">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1083" height="240" key="GridCell.Tab.2.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579655312029" />
-    <state x="667" y="364" width="663" height="413" key="NewPhpClassDialog" timestamp="1579690326308">
+    <state width="1874" height="240" key="GridCell.Tab.2.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579831468147" />
+    <state x="667" y="364" width="663" height="413" key="NewPhpClassDialog" timestamp="1579824119370">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="667" y="364" width="663" height="413" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579690326308" />
+    <state x="667" y="364" width="663" height="413" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579824119370" />
     <state x="2587" y="346" width="575" height="392" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579011263612" />
     <state x="2676" y="464" width="397" height="158" key="NewPhpFileDialog" timestamp="1579005141965">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -490,18 +513,19 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579713954389" />
-    <state x="555" y="296" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1579693911151">
+    <state x="555" y="296" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1579739765087">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="555" y="296" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579693911151" />
+    <state x="555" y="296" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579739765087" />
     <state x="2475" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579021505226" />
     <state x="2096" y="0" width="1251" height="642" maximized="true" key="dock-window-1" timestamp="1579689735584">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2096" y="0" width="1251" height="642" maximized="true" key="dock-window-1/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579689735584" />
-    <state x="2528" y="267" width="703" height="546" key="find.popup" timestamp="1578691930817">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="608" y="287" width="703" height="546" key="find.popup" timestamp="1579830713583">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
+    <state x="608" y="287" width="703" height="546" key="find.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579830713583" />
     <state x="2528" y="267" width="703" height="546" key="find.popup/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578691930817" />
     <state x="605" y="345" width="700" height="424" key="git4idea.merge.GitPullDialog" timestamp="1579655524858">
       <screen x="0" y="27" width="1920" height="1053" />
@@ -524,9 +548,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/uicore/src/Controller/InternalApiController.php</url>
-          <line>21</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/uicore/vendor/plumtreesystems/file-bundle/src/Form/Type/PTSFileType.php</url>
+          <line>109</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

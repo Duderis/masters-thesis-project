@@ -25,12 +25,12 @@ MODEL_NAME="${NAME}"
 
 mkdir -p "${MODEL_PATH}/${MODEL_NAME}"
 
-# mv "${EXPORT_PATH}" "${MODEL_PATH}/${MODEL_NAME}/"
-cp "${EXPORT_PATH}" "${MODEL_PATH}/${MODEL_NAME}/"
-# mv "${CKPT_PATH}"* "${MODEL_PATH}/${MODEL_NAME}/"
-cp "${CKPT_PATH}"* "${MODEL_PATH}/${MODEL_NAME}/"
+mv "${EXPORT_PATH}" "${MODEL_PATH}/${MODEL_NAME}/"
+# cp "${EXPORT_PATH}" "${MODEL_PATH}/${MODEL_NAME}/"
+mv "${CKPT_PATH}"* "${MODEL_PATH}/${MODEL_NAME}/"
+# cp "${CKPT_PATH}"* "${MODEL_PATH}/${MODEL_NAME}/"
 
 tar -czf "${MODEL_PATH}/${MODEL_NAME}.model" "${MODEL_PATH}/${MODEL_NAME}"
 
-# rm -rf "${EXP_FOLDER}"
-# rm -rf "${MODEL_PATH}/${MODEL_NAME}"
+rm -rf "${EXP_FOLDER}"
+rm -rf "${MODEL_PATH}/${MODEL_NAME}"

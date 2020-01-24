@@ -125,9 +125,15 @@ class NeuralNetworkController extends AbstractController
             if ($form->isSubmitted() && $form->isValid()) {
                 $entityManager->flush();
             } else {
+                $classResult = [];
+                if ($analysis->getScheduleState() === Analysis::SCHEDULE_STATE_COMPLETE) {
+                    $classResult = json_decode($analysis->getCategoryResult(), true);
+                }
                 return $this->render('analysis/edit.html.twig', [
                     'form' => $form->createView(),
-                    'analysisId' => $analysis->getId()
+                    'analysisId' => $analysis->getId(),
+                    'analysis' => $analysis,
+                    'classResult' => $classResult
                 ]);
             }
         }

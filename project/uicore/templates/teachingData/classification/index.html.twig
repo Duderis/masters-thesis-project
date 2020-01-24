@@ -3,12 +3,22 @@
 {% block content %}
     <div style="display: flex; justify-content: space-between; align-items: center">
         <h1>Classification data</h1>
-        <div>
-            <a href="{{ path('teachingData_classification_create') }}" class="ui icon button orange">
-                <i class="icon plus"></i>
-                Create
-            </a>
+        <div style="display: flex; justify-content: flex-end; align-items: center">
+            <div>
+                <a href="{{ path('teachingData_classification_create') }}" class="ui icon button orange">
+                    <i class="icon plus"></i>
+                    Create
+                </a>
+            </div>
+            <div style="margin: 8px;padding: 16px;" class="container--bordered">
+                {#                Last updated: Never#}
+                <a href="{{ path('teachingData_classification_prepare') }}" class="ui icon button orange" style="margin:0">
+                    <i class="icon refresh"></i>
+                    Update data
+                </a>
+            </div>
         </div>
+
     </div>
     <div class="ui divider"></div>
     {% include 'teachingData/classification/table.html.twig' %}
